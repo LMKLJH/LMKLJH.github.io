@@ -1,0 +1,10 @@
+# 站点基础配置
+title: 梁家浩 | 数学与教学
+description: 华南理工大学数学与应用数学专业 | 丘成桐竞赛 | 数学教学
+url: "https://LMKLJH.github.io"
+# 极简主题（保证页面干净不花哨）
+theme: minima
+# 关闭多余组件，突出核心内容
+minima:
+  skin: dark
+  show_excerpts: false

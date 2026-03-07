@@ -8,9 +8,8 @@ theme: minima
 minima:
   skin: dark
   show_excerpts: false
-  navigation_items:
-    - title: 主页
-      url: /
+  # 隐藏右上角姓名，只留「个人主页」标题
+  header_pages: []
 
 # 通用配置
 markdown: kramdown
@@ -18,7 +17,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# 精简排除项
+# 排除项
 exclude:
   - Gemfile
   - Gemfile.lock

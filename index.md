@@ -1,15 +1,14 @@
 ---
-layout: page  # 改用page布局，彻底杜绝标题重复
+layout: page  
 permalink: /
 ---
 
 ## 教育经历
-华南理工大学 | 数学与应用数学本科  
-专业排名前3% | GPA 3.82/4
+华南理工大学 | 数学与应用数学 | 本科 | 专业排名前3% | GPA 3.82/4
 
 ---
 
-## 核心荣誉
+## 荣誉
 <table>
   <tr><th>时间</th><th>内容</th></tr>
   <tr><td>2025.06</td><td>第十六届丘成桐大学生数学竞赛 笔试优胜奖 <a href="https://www2.scut.edu.cn/math/2025/0625/c10149a595030/page.htm">学院新闻</a></td></tr>

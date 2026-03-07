@@ -8,11 +8,21 @@ theme: minima
 minima:
   skin: dark
   show_excerpts: false
-  # 隐藏右上角姓名，只留「个人主页」标题
   header_pages: []
 
-# 通用配置
+# 【核心修复】强制 kramdown 正确解析 Markdown 表格
 markdown: kramdown
+kramdown:
+  # 启用严格的表格解析规则（解决|乱码的关键）
+  table_of_contents:
+    enable: false
+  # 确保表格分隔线/列对齐解析正确
+  parse_block_html: true
+  # 关闭多余语法高亮，避免干扰表格渲染
+  syntax_highlighter_opts:
+    disable: true
+
+# 插件（只保留必要项）
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

@@ -68,7 +68,9 @@ permalink: /
 - GitHub：https://github.com/LMKLJH
 ---
 
-##About me (关于我)
+## About me (关于我)
 目前主要学习代数、分析与量子信息。
+
 我想在这里写下：我为什么选择这些方向，远不只是兴趣与能力，更是对自我、人生与价值的思考 —— 学术很重要，但它不是人生的全部。
 <a href="https://github.com/...">关于选择与人生的思考</a>
+

@@ -47,7 +47,7 @@ permalink: /
   <tr><th>时间</th><th>内容</th></tr>
   <tr><td>2023.12–至今</td><td>数学讨论班主讲人：代数学、拓扑流形、李群与李代数</td></tr>
   <tr><td>2024.12–至今</td><td>「学霸带我飞」辅学讲师：数学分析、高等代数辅导</td></tr>
-  <tr><td>2025.12.21</td><td>近世代数90分钟专题演讲：《有限域乘法群与二次互反律》<br><a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/有限域乘法群与二次互反律.pdf">下载讲稿</a></td></tr>
+  <tr><td>2025.12.21</td><td>近世代数90分钟专题演讲：《有限域乘法群与二次互反律》<br><a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/有限域乘法群与二次互反律.pdf">下载投影片</a></td></tr>
 </table>
 
 ---

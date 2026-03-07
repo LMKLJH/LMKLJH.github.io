@@ -18,18 +18,16 @@ permalink: /
 ---
 
 ## 科研与学术
-### 长期研究项目（SRP）
+### 本科生研究项目（SRP）
 - 正式标题：Chevalley restriction theorem for classical simple Lie algebra
-- 方向：李群李代数
+- 方向：李群、李代数
 - 时长：2024.09–2025.09
 - 核心工作：
   1. 独立梳理李群-李代数对应、根系、Weyl群等基础理论；
   2. 对 Aₙ/Bₙ/Cₙ/Dₙ 四类典型单李代数，给出定理的独立完整显式证明；
   3. 明确各类不变多项式生成元；
 - 成果：15页英文学术论文
-- 文件下载：
-  - [论文PDF](Chevalley-restriction-theorem-for-classical-simple-Lie-algebra.pdf)
-  - [LaTeX源文件](Chevalley-restriction-theorem-for-classical-simple-Lie-algebra.tex)
+- 文件下载：- 论文PDF: [Chevalley restriction theorem for classical simple Lie algebra](https://github.com/LMKLJH/LMKLJH.github.io/blob/main/Chevalley_restriction_theorem_for_classical_simple_Lie_algebra.pdf)
 
 ### 短期学术研修
 - 2025.07 中科院信工所「密码与数学」暑校 优秀学员

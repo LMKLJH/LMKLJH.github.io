@@ -17,13 +17,21 @@ permalink: /
 
 ---
 
-## 科研与学术（拆分板块，突出SRP）
+## 科研与学术
 ### 长期研究项目（SRP）
-- **项目主题**：Chevalley Restrictions定理（李群李代数方向）
+- **正式标题**：Chevalley restriction theorem for classical simple Lie algebra（典型单李代数的Chevalley限制定理）
+- **方向**：李群李代数（半单李代数结构与不变量理论）
 - **时长**：2024.09-2025.09（1年）
-- **成果**：完成15页研究论文，系统梳理定理证明与应用，深入探索李群李代数结构
+- **核心工作**：
+  1. 独立梳理李群-李代数对应、根系、Weyl群等基础理论；
+  2. 对Aₙ/Bₙ/Cₙ/Dₙ四类典型单李代数，给出定理的**独立完整显式证明**（证明思路与细节为自主梳理）；
+  3. 明确各类不变多项式生成元（特征多项式、Pfaffian等）；
+- **成果**：15页英文学术论文（严格遵循AMS格式，含定义-引理-命题-证明完整结构）
+- **文件下载**：
+  - [Chevalley restriction theorem for classical simple Lie algebra](Chevalley-restriction-theorem-for-classical-simple-Lie-algebra.pdf)
+  - [LaTeX源文件](Chevalley-restriction-theorem-for-classical-simple-Lie-algebra.tex)
 
-### 短期学术研修（暑期学校）
+### 短期学术研修
 - 2025.07 中科院信工所「密码与数学」暑校 | 优秀学员（院士授课，获签名证书）
 - 2024.07-08 中科院数学所「代数与数论」暑校 | 35天系统研修，夯实代数基础
 
@@ -37,13 +45,12 @@ permalink: /
 ---
 
 ## 核心能力
-- 专业：精通李群李代数、近世代数、实变/泛函分析，掌握Chevalley定理等前沿内容
-- 科研：具备1年独立研究经验，能完成规范的数学研究论文（15页）
-- 教学：擅长将抽象数学内容（如李群）体系化、通俗化讲解
+- 专业：精通典型单李代数、Chevalley限制定理、近世代数、实变/泛函分析，掌握李群表示论基础
+- 科研：1年李群李代数方向研究经验，能独立完成规范的数学学术论文（15页英文）
+- 教学：擅长将抽象代数内容（如李群李代数）体系化、通俗化讲解
 
 ---
 
 ## 联系
 - 邮箱：lmnjkljh@sina.com
-- GitHub：<https://github.com/LMKLJH>
-- 研究论文：[Chevalley Restrictions定理研究（预留）](/chevalley_paper.pdf)
+- GitHub：https://github.com/你的用户名（替换成你的真实GitHub链接）

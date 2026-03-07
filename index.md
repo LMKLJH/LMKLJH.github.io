@@ -54,5 +54,5 @@ permalink: /
 ---
 
 ## 联系
-- 邮箱：lmnjkljh@sina.com
+- 邮箱：lmnjkljh[at]sina.com
 - GitHub：https://github.com/LMKLJH

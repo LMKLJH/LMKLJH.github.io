@@ -1,10 +1,32 @@
-# 站点基础配置
+# 站点基础信息（适配你的个人信息）
 title: 梁家浩 | 数学与教学
 description: 华南理工大学数学与应用数学专业 | 丘成桐竞赛 | 数学教学
-url: "https://LMKLJH.github.io"
-# 极简主题（保证页面干净不花哨）
+url: "https://LMKLJH.github.io"  # 必须和你的仓库名一致
+baseurl: ""
+
+# 主题配置（极简dark主题，符合强者风）
 theme: minima
-# 关闭多余组件，突出核心内容
 minima:
-  skin: dark
-  show_excerpts: false
+  skin: dark          # 深色主题，更沉稳
+  show_excerpts: false # 关闭摘要，只显示核心内容
+  navigation_items:
+    - title: 主页
+      url: /
+    - title: 简历
+      url: /resume.pdf # 后续可上传PDF简历，这里先预留
+
+# 通用配置
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 关闭多余功能，保持页面干净
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

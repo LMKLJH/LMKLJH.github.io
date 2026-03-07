@@ -1,10 +1,9 @@
-# 站点基础信息（适配你的个人信息）
-title: 梁家浩 | 数学与教学
-description: 华南理工大学数学与应用数学专业 | 丘成桐竞赛 | 数学教学
+# 站点基础信息
+title: 梁家浩 | 个人主页
 url: "https://LMKLJH.github.io"  # 必须和你的仓库名一致
 baseurl: ""
 
-# 主题配置（极简dark主题，符合强者风）
+# 主题配置
 theme: minima
 minima:
   skin: dark          # 深色主题，更沉稳
@@ -12,8 +11,6 @@ minima:
   navigation_items:
     - title: 主页
       url: /
-    - title: 简历
-      url: /resume.pdf # 后续可上传PDF简历，这里先预留
 
 # 通用配置
 markdown: kramdown

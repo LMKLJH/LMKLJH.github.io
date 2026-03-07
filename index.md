@@ -1,18 +1,19 @@
----
-layout: page  
+layout: page
 permalink: /
 ---
 
 ## 教育经历
-华南理工大学 | 数学与应用数学 | 本科 | 专业排名前3% | GPA 3.82/4|
+华南理工大学 | 数学与应用数学 | 本科
 
 ---
 
-## 研究兴趣
-代数、分析方法在量子信息中的应用。
-目前在郑驻军老师指导下学习量子信息基础理论。
+## 学术兴趣
+代数、分析及其在量子信息中的应用。
+目前在郑驻军老师指导下学习量子信息基础理论，未来希望从事量子信息与量子计算相关研究。
 
-## 荣誉
+---
+
+## 获奖经历
 <table>
   <tr><th>时间</th><th>内容</th></tr>
   <tr><td>2025.06</td><td>第十六届丘成桐大学生数学竞赛 笔试优胜奖 <a href="https://www2.scut.edu.cn/math/2025/0625/c10149a595030/page.htm">学院新闻</a></td></tr>
@@ -24,8 +25,10 @@ permalink: /
 ---
 
 ## 科研与学术
-### 本科生研究项目（SRP） 导师：孙浩
-- 论文成果：<a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/Chevalley_restriction_theorem_for_classical_simple_Lie_algebra.pdf">Chevalley restriction theorem for classical simple Lie algebra</a>
+
+### 本科生研究项目（SRP）
+**指导老师：孙浩**
+- 学习报告：<a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/Chevalley_restriction_theorem_for_classical_simple_Lie_algebra.pdf">Chevalley restriction theorem for classical simple Lie algebra</a>
 - 方向：李群李代数、不变量理论
 - 时间：2024.04–2025.03
 - 核心工作：
@@ -36,8 +39,8 @@ permalink: /
 ### 短期学术研修
 <table>
   <tr><th>时间</th><th>内容</th></tr>
-  <tr><td>2025.07.12-07.25</td><td>中科院信工所「密码与数学」暑校 优秀学员</td></tr>
-  <tr><td>2024.07.14-08.23</td><td>中科院数学所「代数与数论」暑校 系统研修</td></tr>
+  <tr><td>2025.07.12–07.25</td><td>中科院信工所「密码与数学」暑校 优秀学员</td></tr>
+  <tr><td>2024.07.14–08.23</td><td>中科院数学所「代数与数论」暑校 系统研修</td></tr>
 </table>
 
 ---
@@ -45,16 +48,17 @@ permalink: /
 ## 教学实践
 <table>
   <tr><th>时间</th><th>内容</th></tr>
-  <tr><td>2023.12–至今</td><td>数学讨论班主讲人：代数学、拓扑流形、李群与李代数</td></tr>
+  <tr><td>2023.12–至今</td><td>数学讨论班主讲：代数学、拓扑流形、李群与李代数</td></tr>
   <tr><td>2024.12–至今</td><td>「学霸带我飞」辅学讲师：数学分析、高等代数辅导</td></tr>
-  <tr><td>2025.12.21</td><td>近世代数90分钟专题演讲：《有限域乘法群与二次互反律》<br><a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/有限域乘法群与二次互反律.pdf">下载投影片</a></td></tr>
+  <tr><td>2025.12.21</td><td>近世代数专题演讲：《有限域乘法群与二次互反律》<br><a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/有限域乘法群与二次互反律.pdf">下载投影片</a></td></tr>
 </table>
 
 ---
 
 ## 个人优势
-- 专业：早期接触学术讨论班与前沿方向，具备向量子信息交叉的扎实数学背景，熟悉近世代数、实变函数、泛函分析，掌握李群和表示论基础。
-- 科研与教学：1年李群李代数方向研究经验，能独立完成规范的英文学术论文；擅长将抽象代数内容体系化、通俗化讲解。
+- 较早参与学术讨论班与相关方向学习，具备向量子信息交叉的数学基础，熟悉近世代数、实变函数、泛函分析，掌握李群和表示论基础。
+- 有一年李群李代数方向系统学习经历，能独立完成规范的英文学习报告；
+- 擅长将抽象内容体系化、通俗化讲解。
 
 ---
 

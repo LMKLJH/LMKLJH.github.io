@@ -1,13 +1,13 @@
 # 站点基础信息
-title: 梁家浩 | 个人主页
-url: "https://LMKLJH.github.io"  # 必须和你的仓库名一致
+title: 个人主页
+url: "https://LMKLJH.github.io"
 baseurl: ""
 
 # 主题配置
 theme: minima
 minima:
-  skin: dark          # 深色主题，更沉稳
-  show_excerpts: false # 关闭摘要，只显示核心内容
+  skin: dark
+  show_excerpts: false
   navigation_items:
     - title: 主页
       url: /
@@ -18,7 +18,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# 关闭多余功能，保持页面干净
+# 精简排除项
 exclude:
   - Gemfile
   - Gemfile.lock

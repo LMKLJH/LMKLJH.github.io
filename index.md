@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page  # 改用page布局，彻底杜绝标题重复
 permalink: /
 ---
 
@@ -10,18 +10,19 @@ permalink: /
 ---
 
 ## 核心荣誉
-| 时间     | 内容 |
-|----------|------|
-| 2025.06  | 第十六届丘成桐大学生数学竞赛 笔试优胜奖 [学院新闻](https://www2.scut.edu.cn/math/2025/0625/c10149a595030/page.htm) |
-| 2024.10  | 全国大学生数学竞赛 广东省一等奖 |
-| 2024.12  | 国家奖学金 |
-| 2024.09  | 华南理工大学数学竞赛 第一名 |
+<table>
+  <tr><th>时间</th><th>内容</th></tr>
+  <tr><td>2025.06</td><td>第十六届丘成桐大学生数学竞赛 笔试优胜奖 <a href="https://www2.scut.edu.cn/math/2025/0625/c10149a595030/page.htm">学院新闻</a></td></tr>
+  <tr><td>2024.10</td><td>全国大学生数学竞赛 广东省一等奖</td></tr>
+  <tr><td>2024.12</td><td>国家奖学金</td></tr>
+  <tr><td>2024.09</td><td>华南理工大学数学竞赛 第一名</td></tr>
+</table>
 
 ---
 
 ## 科研与学术
 ### 本科生研究项目（SRP） 导师：孙浩
-- 论文成果：[Chevalley restriction theorem for classical simple Lie algebra](https://github.com/LMKLJH/LMKLJH.github.io/raw/main/Chevalley_restriction_theorem_for_classical_simple_Lie_algebra.pdf)
+- 论文成果：<a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/Chevalley_restriction_theorem_for_classical_simple_Lie_algebra.pdf">Chevalley restriction theorem for classical simple Lie algebra</a>
 - 方向：李群李代数、不变量理论
 - 时间：2024.04–2025.03
 - 核心工作：
@@ -30,19 +31,21 @@ permalink: /
   3. 明确各类不变多项式生成元；
 
 ### 短期学术研修
-| 时间               | 内容 |
-|--------------------|------|
-| 2025.07.12-07.25   | 中科院信工所「密码与数学」暑校 优秀学员 |
-| 2024.07.14-08.23   | 中科院数学所「代数与数论」暑校 系统研修 |
+<table>
+  <tr><th>时间</th><th>内容</th></tr>
+  <tr><td>2025.07.12-07.25</td><td>中科院信工所「密码与数学」暑校 优秀学员</td></tr>
+  <tr><td>2024.07.14-08.23</td><td>中科院数学所「代数与数论」暑校 系统研修</td></tr>
+</table>
 
 ---
 
 ## 教学实践
-| 时间             | 内容 |
-|------------------|------|
-| 2023.12–至今     | 数学讨论班主讲人：代数学、拓扑流形、李群与李代数 |
-| 2024.12–至今     | 「学霸带我飞」辅学讲师：数学分析、高等代数辅导 |
-| 2025.12.21       | 近世代数90分钟专题演讲：《有限域乘法群与二次互反律》<br>[下载讲稿](https://github.com/LMKLJH/LMKLJH.github.io/raw/main/有限域乘法群与二次互反律.pdf) |
+<table>
+  <tr><th>时间</th><th>内容</th></tr>
+  <tr><td>2023.12–至今</td><td>数学讨论班主讲人：代数学、拓扑流形、李群与李代数</td></tr>
+  <tr><td>2024.12–至今</td><td>「学霸带我飞」辅学讲师：数学分析、高等代数辅导</td></tr>
+  <tr><td>2025.12.21</td><td>近世代数90分钟专题演讲：《有限域乘法群与二次互反律》<br><a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/有限域乘法群与二次互反律.pdf">下载讲稿</a></td></tr>
+</table>
 
 ---
 

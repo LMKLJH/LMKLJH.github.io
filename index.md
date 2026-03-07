@@ -24,7 +24,7 @@ permalink: /
 
 ---
 
-## 科研与学术
+## 科研训练经历
 
 ### 本科生研究项目（SRP）
 **指导老师：孙浩**
@@ -36,7 +36,7 @@ permalink: /
   2. 对 Aₙ/Bₙ/Cₙ/Dₙ 四类典型单李代数，给出定理的独立完整显式证明；
   3. 明确各类不变多项式生成元；
 
-### 短期学术研修
+### 短期暑校经历
 <table>
   <tr><th>时间</th><th>内容</th></tr>
   <tr><td>2025.07.12–07.25</td><td>中科院信工所「密码与数学」暑校 优秀学员</td></tr>
@@ -50,7 +50,7 @@ permalink: /
   <tr><th>时间</th><th>内容</th></tr>
   <tr><td>2023.12–至今</td><td>数学讨论班主讲：代数学、拓扑流形、李群与李代数</td></tr>
   <tr><td>2024.12–至今</td><td>「学霸带我飞」辅学讲师：数学分析、高等代数辅导</td></tr>
-  <tr><td>2025.12.21</td><td>近世代数专题演讲：《有限域乘法群与二次互反律》<br><a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/有限域乘法群与二次互反律.pdf">下载投影片</a></td></tr>
+  <tr><td>2025.12.21</td><td>近世代数90分钟专题演讲：《有限域乘法群与二次互反律》<br><a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/有限域乘法群与二次互反律.pdf">下载投影片</a></td></tr>
 </table>
 
 ---

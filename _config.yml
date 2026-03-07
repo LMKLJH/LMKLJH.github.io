@@ -1,38 +1,22 @@
 # 站点基础信息
-title: 个人主页
-url: "https://LMNJKLJH.github.io"
+title: 个人主页  # 浏览器标签页显示，不会乱渲染
+url: "https://LMKLJH.github.io"
 baseurl: ""
 
-# 主题配置
-theme: minima
-minima:
-  skin: dark
-  show_excerpts: false
-  header_pages: []
+# 关键：换掉 Minima 主题，用 Primer 主题（GitHub 同款）
+remote_theme: pages-themes/primer@v0.6.0
+# 关闭 Primer 主题的多余导航/标题
+plugins:
+  - jekyll-remote-theme  # 必须加这个插件，才能加载远程主题
+  - jekyll-feed
 
-# 【核心修复】强制 kramdown 正确解析 Markdown 表格
+# 表格渲染配置（Primer 主题原生支持 Markdown 表格）
 markdown: kramdown
 kramdown:
-  # 启用严格的表格解析规则（解决|乱码的关键）
-  table_of_contents:
-    enable: false
-  # 确保表格分隔线/列对齐解析正确
   parse_block_html: true
-  # 关闭多余语法高亮，避免干扰表格渲染
-  syntax_highlighter_opts:
-    disable: true
 
-# 插件（只保留必要项）
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-
-# 排除项
+# 排除多余文件
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/

@@ -1,0 +1,964 @@
+\documentclass[11pt]{amsart}
+% !Mode:: "TeX:UTF-8"
+\usepackage{amssymb,amsfonts,amsmath,amsthm}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage[toc,page]{appendix}
+\usepackage[left=3cm, right=3cm, bottom=3cm]{geometry}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{color}
+\usepackage{tikz-cd}  % graph
+\usepackage{mathdots} %\ddots, \vdots, \iddots
+\usepackage{romannum} %Roman number
+\usepackage{hyperref} %hyperlink for reference
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{qthm}[thm]{Quasi-Theorem}
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{cor*}{Corollary}
+\newtheorem*{prop*}{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem*{notn*}{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem{exer}[thm]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+\newtheorem*{idea*}{Idea}
+
+
+\newcommand{\Spec}{{\rm Spec}}
+%\newcommand{\ch}{{\rm ch}}
+
+% Lei's command
+\newcommand{\sshf}[1]{\mathcal{O}_{#1}} % structure sheaf
+\newcommand{\shf}[1]{\mathscr{#1}} % sheaf
+\newcommand{\proj}[1]{\textrm{proj}(#1)} % Proj
+\newcommand{\prj}[1]{\mathbb{P}^{#1}} % projective space
+\newcommand{\map}[3]{#1: #2\rightarrow#3}
+\newcommand{\ts}[1]{\otimes_{#1}} % tensor
+\newcommand{\iso}{\simeq} % isomorphism
+\newcommand{\ses}[3]{0\rightarrow#1\rightarrow#2\rightarrow#3\rightarrow{0}} % short exact sequence
+\newcommand{\ch}[1]{\textrm{ch}(#1)} %Character function%
+\newcommand{\pf}[1]{\textrm{pf}(#1)}
+\newcommand{\embedding}{\hookrightarrow}
+\newcommand{\rk}[1]{\textrm{rank}(#1)} % rank
+\newcommand{\is}[1]{\mathscr{I}_{#1}} % ideal sheaf
+\newcommand{\lsp}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\dlc}[1]{\omega^{\bullet}_{#1}}
+\newcommand{\spec}[1]{\textrm{spec}#1}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{thm}{section}
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\title[Student Research Program of mathematics]{Chevalley restriction theorem for classical simple Lie algebra}
+
+\author{Jiahao Liang}
+
+\begin{document}
+\pagenumbering{arabic}
+\maketitle
+\begin{abstract}
+In this article, I demonstrate the background knowledge 
+,  which is mainly about Lie group-Lie algebra correspondence and Chevalley restriction theorem and prove that it holds for the case of classical simple Lie groups.
+\end{abstract}
+% keywords can be removed
+
+\flushbottom
+
+%\tableofcontents
+
+%\newpage
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\footnotetext[1]{MSC2010 Class: 14D20, 14J60}
+\footnotetext[2]{Key words:complex semisimple Lie algebra, Cartan subalgebra, Weyl group, invariant polynomial function}
+
+\section{Introduction}%以下内容是介绍
+At the International Congress of Mathematicians in 1950, Claude Chevalley proposed the famous Chevalley restriction theorem, which states that the conjugate invariant functions on a semisimple Lie algebra are isomorphic to the Weyl group invariant functions on a Cartan subalgebra. The theorem was fully proved by Robert Steinberg in 1965 and generalized to semisimple algebraic groups. Since then, mathematicians have made many advances in the higher-dimensional \cite{CN} generalization of Chevalley's restriction theorem. When we study the properties of high-dimensional Hitchin morphism, the Chevalley restriction theorem plays a key role.
+
+In this article, I demonstrate the background knowledge and prove that it holds true for the case of classical simple Lie groups.
+\subsection{Chevalley restriction theorem}
+\begin{itemize}
+    \item $G$: a \textbf{complex connected semi-simple} Lie group;
+    \item $\mathfrak{g}$: the Lie algebra of $G$.
+    \item $\mathbb{C} \left[ \mathfrak{g} \right] ^G$: the polynomial functions on $\mathfrak {g}$ which are invariant under the \textbf{adjoint $G$-action}.
+    \item $\mathfrak{h}$: a \textbf{Cartan subalgebra} of $\mathfrak{g}$.
+    \item $W$: the \textbf{Weyl group} of $G$.
+    \item $\mathbb{C} \left[ \mathfrak{h} \right] ^W$: the polynomial functions on $\mathfrak{h}$ which are invariant under the natural action of $W$.
+\end{itemize}
+Then restriction of polynomial functions induces an isomorphism as \textbf{graded algebra}:
+$$
+\mathbb{C} \left[ \mathfrak{g} \right] ^G\cong \mathbb{C} \left[ \mathfrak{h} \right] ^W.
+$$
+
+\subsection{Elucidate} 
+\begin{itemize}
+    \item We introduce how to obtain the Lie algebra of a Lie group in the section of the Lie group–Lie algebra correspondence.
+    \item Adjoint $G$-action (for linear Lie groups): We have a $G$-action on $\mathfrak{g}$ defined by $g.x = g^{-1}xg$. This induces an action on $\mathbb{C}[\mathfrak{g}]$, $g.P(x): = P(g^{-1}xg)$. In the section of the Lie group–Lie algebra correspondence, we will prove that this $G$-action is well - defined. $P$ is a polynomial function, which means that when we have chosen a basis, the function $P$ can be written as a polynomial of the coordinates. In summary, 
+$$\mathbb{C} \left[ \mathfrak{g} \right] ^G:=\left\{ P:\mathfrak{g} \rightarrow \mathbb{C} \left| \begin{array}{c}
+	\text{for all } (x,g)\in \mathfrak{g}\times G, P\left( g^{-1}xg \right) =P\left( x \right)\\
+	P\left( \sum_{k=1}^n{x_ke_k} \right) =\sum{a_{k_1..k_n}x_{1}^{k_1}..x_{n}^{k_n}}\\
+\end{array} \right. \right\} .
+$$
+\item For complex  semisimple Lie algebra $\mathfrak{g}$, we have root space decomposition \cite{GTM09}
+$$\mathfrak{g} =\mathfrak{h} \oplus \bigoplus_{\alpha \in \Phi}^{}{\mathfrak{g} _{\alpha}},$$
+while $\mathfrak{g} _{\alpha}:=\left\{ x\in \mathfrak{g} |\forall h\in \mathfrak{h},\mathrm{ad}\,h(x) =\alpha \left( h \right) x \right\} $ , $\alpha \in \mathfrak{h}^*$.  And the root system $\Phi$ has a base $\Delta$, which can span the whole space $\mathfrak{h}^*$.
+\item The killing form $\kappa(x,y):=\mathrm{tr} (\mathrm{ad} x \, \mathrm{ad} y)$ and its restriction on $\mathfrak{h}$ is  non degenerate\cite{GTM09} , so for all 
+$ \alpha \in \mathfrak{h}^*$, there exists unique $t_{\alpha}$ such that 
+$$
+\alpha =\kappa \left( t_{\alpha},- \right) :\mathfrak{h} \longrightarrow \mathbb{C},\quad h\longmapsto \kappa \left( t_{\alpha},h \right) .
+$$
+Let $E:=\mathbb{R} \alpha _1\oplus \mathbb{R} \alpha _1\oplus \cdots \oplus \mathbb{R} \alpha _l$, and $(\alpha,\beta):=\kappa(t_{\alpha},t_{\beta})$ then $\Phi$ becomes a root system of euclidean space\cite{GTM09} $E$. 
+\item What is the Weyl group? Firstly, we define the Weyl group  \cite{GTM09} $W :=\left< \sigma _{\alpha}:\alpha \in \Phi \right>\subseteq O(E) $, while $\sigma_{\alpha} :E\to E $  such that  $$
+\sigma _{\alpha}\left( \beta \right) =\beta -\frac{2\left( \beta ,\alpha \right)}{\left( \alpha ,\alpha \right)}\alpha .
+$$
+\item What is its natural action? Let $\Delta =\{\alpha _1,...,\alpha_l\}\subseteq \Phi$  be a base and fix a reflection $\sigma_{\alpha}:\alpha \in \Phi$, since $\sigma_{\alpha}(\Phi)=\Phi$, we have $
+\Delta \hookrightarrow \Phi 
+$. We denote $\varphi:\alpha \mapsto  t_{\alpha}$. Since $\Delta$ is a basis of $\mathfrak{h}^*$, there exists a unique $\tilde{\sigma}_{\alpha}$ that makes the following diagram commute. 
+\begin{center}
+\begin{tikzcd}
+	\beta & \Delta & \Phi \\
+	{t_{\beta}} & {\mathfrak{h}} & {\mathfrak{h}} 
+	\arrow[maps to, from=1-1, to=2-1]
+	\arrow["{\sigma_{\alpha}}", hook, from=1-2, to=1-3]
+	\arrow["\varphi"', hook', from=1-2, to=2-2]
+	\arrow["\varphi", hook', from=1-3, to=2-3]
+	\arrow["{\tilde{\sigma}_{\alpha}}", dashed, from=2-2, to=2-3]
+\end{tikzcd}
+\end{center}
+Thus, we have $W$ acts on $\mathfrak{h}$, extended by actions of its generators
+$$
+W\times \mathfrak{h} \longrightarrow \mathfrak{h} \quad \left( \sigma _{\alpha},\sum_i{c_it_{\alpha _i}} \right) \longmapsto \sum_i{c_i\tilde{\sigma}_{\alpha}\left( t_{\alpha _i} \right)}.
+$$
+In fact we can indentify $t_{\alpha}=\alpha $ via $\varphi$.
+\end{itemize}
+
+\vspace{0.5cm}
+\section{Lie group-Lie algebra correspondence}
+\subsection{Lie algebra of linear Lie group} 
+ Let $\mathbb{K}=\mathbb{R} $ or $\mathbb{C}$. \begin{lem}[chap.3 in \cite{SGLG}]
+ Let $x,y\in M_n(\Bbb{C})$ then we have \\
+(i) (Trotter Product Formula)
+$$
+\underset{k\rightarrow \infty}{\lim}\left( \exp \frac{x}{k}\exp \frac{y}{k} \right) ^k=\exp \left( x+y \right) .
+$$
+(ii) (Commutator Formula) 
+$$
+\underset{k\rightarrow \infty}{\lim}\left( \exp \frac{x}{k}\exp \frac{y}{k}\exp \frac{-x}{k}\exp \frac{-y}{k} \right) ^{k^2}=\exp \left( xy-yx \right) .
+$$
+\end{lem}
+
+\begin{defn}
+ Let $
+G\subseteq \mathrm{GL}_n\left( \mathbb{K}\right) $ be a closed subgroup of $\mathrm{GL}_n\left( \mathbb{K} \right) 
+$, define $$
+\mathbf{L}\left( G \right) :=\left\{ x\in M_n\left( \mathbb{K} \right) |\forall t\in \mathbb{R},\exp \left( t x \right) \in G \right\} 
+$$
+with Lie bracket $
+\left[ x,y \right] :=xy-yx
+$, then $\mathbf{L}(G)$  be come a Lie algebra, called the Lie algebra of Lie group.
+\end{defn}
+
+\begin{proof}
+  Using Lemma 2.1 we know $\mathbf{L}(G)$ is a Lie algebra with $[x,y]=xy-yx$. 
+(Refer to \cite{SGLG}Chap.3 for a detailed proof)    
+\end{proof}
+
+
+\begin{prop}[Chap.4 in \cite{SGLG}]
+Let $\beta:V\times V\to \Bbb{K} $ be a bilinear map and $V$ be a linear space of finite dimension over $\Bbb{K}=\Bbb{R} $ or $\Bbb{C}$, then we have a closed subgroup 
+$$
+G=\mathrm{Aut}\left( V,\beta \right) :=\left\{ g\in \mathrm{GL}\left( V \right) :\forall v,w\in V,\beta \left( gv,gw \right) =\beta \left( v,w \right) \right\} 
+$$
+and its Lie algebra
+$$
+\\
+\mathbf{L}G=\left\{ x\in \mathfrak{g} \mathfrak{l} \left( V \right) :\beta \left( xv,w \right) +\beta \left( v,xw \right) =0 \right\} .
+$$
+If $\beta \left( v,w \right) =v^\top Bw$ then
+$$
+\mathbf{L}G=\left\{ x\in \mathfrak{g} \mathfrak{l} \left( V \right) :x^\top B+Bx=0 \right\};
+$$
+If $\beta \left( v,w \right) =v^*Bw$ then
+$$
+\mathbf{L}G=\left\{ x\in \mathfrak{g} \mathfrak{l} \left( V \right) :x^*B+Bx=0 \right\}.
+$$
+\end{prop}
+
+\begin{exmps}
+Let $$
+I_{p,q}:=\left( \begin{matrix}
+	0&		I_p\\
+	I_q&		0\\
+\end{matrix} \right),\, J_n:=\left( \begin{matrix}
+	0&		I_n\\
+	-I_n&		0\\
+\end{matrix} \right).
+$$
+By Proposition 2.4 
+\begin{itemize}
+    \item If $\mathrm{O}_{p,q}\left( \mathbb{K} \right) :=\left\{ x\in \mathrm{GL}_{p+q}\left( \mathbb{K} \right) :x^\top I_{p,q}x=I_{p,q} \right\} $ then
+$$
+\mathfrak{o} _{p,q}\left( \mathbb{K} \right) =\left\{ x\in \mathfrak{g} \mathfrak{l} _{p+q}\left( \mathbb{K} \right) |x^\top I_{p,q}+I_{p,q}x=0 \right\} =\mathbf{L}\mathrm{O}_{p,q}\left( \mathbb{K} \right) ;
+$$
+\item If$
+\mathrm{sp}_n\left( \mathbb{K} \right) :=\left\{ g\in \mathrm{GL}_{2n}\left( \mathbb{K} \right) :g^\top J_n+J_ng=0 \right\} 
+$ then 
+\begin{align*}
+    \mathfrak{s} \mathfrak{p} _n\left( \mathbb{K} \right) :&=\left\{ x\in \mathfrak{g} \mathfrak{l} _{2n}\left( \mathbb{K} \right) :x^\top J_n+J_nx=0 \right\} \\
+ &=\left\{ \left( \begin{matrix}
+	A&		B\\
+	C&		D\\
+\end{matrix} \right) \in \mathfrak{gl}_{2n}\left( \mathbb{K} \right) :B^\top =B,C^\top =C,D=-A^\top \right\} ;
+\end{align*}
+\item Let $G:=\mathrm{SO}_{p,q}(\Bbb{C}):=\mathrm{O}_{p,q}(\Bbb{C})\cap \mathrm{SL}_n(\Bbb{C})$ , then we have
+$$
+\mathfrak{so} _{p,q}(\Bbb{C}):=\mathbf{L}\mathrm{SO}_{p,q}\left( \mathbb{C} \right) =\left\{ x\in \mathfrak{g} \mathfrak{l} _{p+q}\left( \mathbb{C} \right) |x^\top I_{p,q}+I_{p,q}x=0 \right\} =\mathfrak{o} _{p,q}.
+$$
+\end{itemize}
+\end{exmps}
+
+\subsection{The Lie functor}
+\begin{prop}
+ Let $\varphi: G_1\to G_2$ be a morphism of Lie groups, then there exists unique morphism of Lie algebras $\mathbf{L}(\varphi)$ making the following diagram commute
+\begin{center}   
+\begin{tikzcd}   
+G_1 \arrow[dd,leftarrow, no head,"\mathrm{exp}_{G_1}"'] \arrow[r,"\varphi"] & G_2 \arrow[dd,leftarrow, no head,"\mathrm{exp}_{G_2}"]\\   
+&\\   
+\mathbf{L}(G_1)\arrow[r,dashed,"\mathbf{L}(\varphi)"] & \mathbf{L}(G_2)   
+\end{tikzcd} 
+\end{center}
+And we have a functor $\mathbf{L}$ from the category of linear Lie groups to the category of Lie algebras over $\mathbb{K}$.
+\end{prop}
+
+\begin{proof}
+(Refer to \cite{SGLG} Chap.3 for a detailed proof)   For the existence of $\mathbf{L}(\varphi)$, we define
+$$
+\mathbf{L}\left( \varphi \right) :\mathbf{L}(G_1)\longrightarrow \mathbf{L}(G_2)\qquad x\longmapsto \left. \frac{\mathrm{d}}{\mathrm{d}t} \right|_{t=0}\varphi \left( \exp _{G_1}\left( tx \right) \right) .
+$$
+\end{proof}
+
+\begin{exmps}[\textbf{Adjoint G-action}]
+For linear Lie groups, let $g\in G$, then we have an isomorphism of Lie groups:
+$$
+c_g:G\longrightarrow G,\,\, h\longmapsto ghg^{-1}.
+$$
+Then it is easy to know 
+$$
+L\left( c_g \right) :\mathbf{L}(G)\longrightarrow \mathbf{L}(G), \,\,x\longmapsto gxg^{-1}.
+$$
+which is an isomorphism of Lie algebras. This induces a smooth action of the Lie group on $\mathbf{L}(G)$
+$$
+G\times \mathbf{L}G\longrightarrow \mathbf{L}G\quad \left( g,x \right) \longmapsto gxg^{-1}.
+$$
+\end{exmps}
+
+\subsection{Adjoint Representation}. 
+\begin{lem}
+Let $x,y\in \mathfrak{gl}(V)$ be two arbitrary linear maps, then we have
+$$
+e^xye^{-x}=e^{\mathrm{ad}\,x}y.
+$$
+\end{lem}
+\begin{proof}
+Let $\lambda _x:y\longmapsto xy,\,\rho _x=y\longmapsto yx
+$, which are commutative, then we have
+$$
+e^xye^{-x}=e^{-\rho _x}e^{\lambda _x}y=e^{\lambda _x-\rho _x}y.
+$$
+\end{proof} 
+
+\begin{prop}
+We define the adjoint representation of $G$ by
+$$
+\mathrm{Ad}:G\longrightarrow \mathrm{Aut}\left( G \right) ,\quad g\longmapsto c_g.
+$$
+Then we have
+$$
+\mathbf{L}\left( \mathrm{Ad} \right) =\mathrm{ad}:\mathbf{L}G\longrightarrow \mathbf{L}\mathrm{Aut}\left( G \right) \subseteq \mathfrak{g} \mathfrak{l} \left( \mathbf{L}G \right).$$
+\end{prop}
+
+\begin{proof}
+ Since $e^xye^{-x}=e^{\mathrm{ad}\,x}y$, we have the following commutative diagram
+\begin{center}
+\begin{tikzcd}
+	G && {\mathrm{Aut} (G)} \\
+	\\
+	{\mathbf{L}G} && {\mathfrak{gl}(\mathbf{L}G)}
+	\arrow["{\mathrm{Ad}}", from=1-1, to=1-3]
+	\arrow["{\exp_1}", from=3-1, to=1-1]
+	\arrow["{\exp_2}"', from=3-3, to=1-3]
+	\arrow["{\mathrm{ad}}"', from=3-1, to=3-3]
+\end{tikzcd}
+\end{center}
+For uniqueness we know $\mathbf{L}\left( \mathrm{Ad} \right) =\mathrm{ad}$. 
+\end{proof}
+ 
+
+\begin{defn}[Inner isomorhism of $\mathfrak{g}$]
+For the linear Lie group over $\Bbb{C}$, define
+$$
+\mathrm{Inn}\left( \mathfrak{g} \right) :=\left< e^{\mathrm{ad}\,x}:x\in \mathfrak{g} \right> =\left< \mathrm{Ad}\left( e^{-x} \right) :x\in \mathfrak{g} \right> .
+$$
+\end{defn}
+
+\begin{rem}
+The group $\mathrm{Inn}\left( \mathfrak{g} \right)$ acting on $\mathfrak{g}$ can identify as some adjoint $G$-actions because of
+$$
+\mathrm{Inn}\left( \mathfrak{g} \right) \subseteq \left\{ \mathrm{Ad}\left( g \right) :g\in G \right\}.
+$$
+\end{rem}
+
+\begin{cor*}
+ If $H$ is a normal Lie subgroup of $G$, then $\mathbf{L}H$ is an ideal of $\mathbf{L}G$.
+\end{cor*}
+\begin{proof}
+     $H\lhd G$ implies that $\mathrm{Ad}:G\to \mathrm{Aut}(H)$, so we have $\mathrm{ad}:\mathbf{L}G \to \mathfrak{gl}(\mathbf{L}H)$. So for all $x\in \mathbf{L}G,\mathrm{ad}\,x$ preserves $\mathbf{L}H$.
+\end{proof}
+
+\vspace{0.5cm}
+\section{Classification of complex Simple Lie algebra and their Weyl groups}
+
+The materials in the section are well-known and readers should refer to \cite{GTM09} for more details. 
+
+\begin{lem}\label{lem:1}
+We have a canonical isomorphism as Lie groups
+$$
+\mathrm{SO}_{n,n}\left( \mathbb{C} \right) \cong \mathrm{SO}_{2n}\left( \mathbb{C} \right) .
+$$
+In fact $\mathrm{SO}_{n,n}\left( \mathbb{C} \right) \to \mathrm{SO}_{2n}\left( \mathbb{C} \right) ,\,\, g \mapsto ugu^{-1}$ gives an isomorphism with 
+$$
+u=\left( \begin{matrix}
+	I_n&		I_n\\
+	\mathrm{
+}-iI_n&		iI_n\\
+\end{matrix} \right) =\left( \begin{matrix}
+	I&		0\\
+	0&		iI\\
+\end{matrix} \right) \left( \begin{matrix}
+	I&		I\\
+	-I&		I\\
+\end{matrix} \right) ,\quad i^2=-1.
+$$
+\end{lem}
+\textbf{Proof}: Calculate and verify directly.
+
+\begin{rem}
+Using the Lie functor, we have $\mathfrak{so}_{n,n}\left( \mathbb{C} \right) \cong \mathfrak{so}_{2n}\left( \mathbb{C} \right) $ as Lie algebras.
+\end{rem}
+
+
+\begin{lem}[The classification theorem \cite{GTM09} for semisimple Lie algebras]
+      Every finite-dimensional semisimple Lie algebra over $\Bbb{C}$  is isomorphic to a direct sum of simple Lie algebras. These simple Lie algebras can be classified into the following types: $A_n$, $B_n$, $C_n$, $D_n$, $E_6$, $E_7$, $E_8$, $F_4$, and $G_2$. 
+The general forms of these Lie algebras are given by: 
+\begin{itemize}
+    \item $A_n$ ($n \geq 1$): the Lie algebra $\mathfrak{sl}_{n+1}( \mathbb{C})$, with complex  Lie group $\mathrm{SL}_{n+1}(\Bbb{C})$ ;
+    \item $B_n$ ($n \geq 2$): the Lie algebra $$\mathfrak{so}_{2n}(\mathbb{C})\simeq\mathfrak{so}(\mathbb{C}^{2n+1}, T) := \{x \in \mathfrak{gl}_{2n+1}(\mathbb{C}) : x^\top T + T x = 0\};$$ while $T := 
+\begin{pmatrix}
+ I_{n,n} & 0 \\
+0 & 1 \\
+\end{pmatrix}
+\in M_{2n+1}(\mathbb{C})$
+    \item $C_n$ ($n \geq 3$): 
+the Lie algebra $$\mathfrak{g=sp}_{2n}(\mathbb{C})= \{x \in \mathfrak{gl}_{2n}(\mathbb{C}) : x^\top J_n + J_nx = 0 \};$$
+    \item $D_n$ ($n \geq 4$):
+ the Lie algebra $$\mathfrak{so}_{2n}(\mathbb{C})\simeq\mathfrak{so}(\mathbb{C}^{2n}, I_{n,n}):= \{x \in \mathfrak{gl}_{2n}(\mathbb{C}) : x^\top I_{n,n} + I_{n,n} x = 0\};$$
+    \item $E_6$: a complex Lie algebra of dimension 78;
+    \item $E_7$: a complex Lie algebra of dimension 133;
+    \item $E_8$: a complex Lie algebra of dimension 248;
+    \item $F_4$: a complex Lie algebra of dimension 52;
+    \item $G_2$: a complex Lie algebra of dimension 14.
+\end{itemize}
+\end{lem}
+
+\begin{defn}[Cartan subalgebra]
+We say that the subalgebra $\mathfrak{h}$ is a Cartan subalgebra of $\mathfrak{g}$ if $\mathfrak{h}$ is nilpotent and $N_{\mathfrak{g}}(\mathfrak{h})=\mathfrak{h}$.
+\end{defn}
+
+\begin{lem}[Chap.6 in \cite{SGLG} ]
+Let $\mathfrak{g}$ be a simisimple Lie algebra over $\Bbb{C}$, then the following are equivalent:
+\begin{itemize}
+\item $\mathfrak{h}$ is a Cartan subalgebra.
+\item $\mathfrak{h}$ is a maximal torus subalgebra.
+\item $\mathfrak{h}$ is a maximal abelian subalgebra consisting of semisimple elements.
+\end{itemize}
+\end{lem}
+
+
+\begin{lem}[\cite{SGLG}Cartan subalgebra of classical simple Lie algebra]
+Let 
+\begin{enumerate}
+\item $\mathfrak{h}$ denote one of Cartan subalgebra of $\mathfrak{g}$;
+\item  $\varepsilon_j : \mathfrak{h} \to \mathbb{C}$ be the linear functions defined by 
+$$\varepsilon_k(\mathrm{diag}(h, -h)) := h_k,\quad h=(h_1,...,h_n);$$
+\item  $\Delta$ be the basis of the root system; 
+\item $E_{i,j}$ denote the elementry matrix and $E_{k}:=E_{kk}$ .
+\end{enumerate}
+ Then we have we have the following results.
+\begin{itemize}
+\item $A_n$ ($n\geq1$):When $\mathfrak{g=sl}_{n + 1}(\mathbb{C})$ 
+$$\mathfrak{h}=\mathrm{span}\{E_{j} - E_{j+1} : j = 1, \ldots, n\} = \{\mathrm{diag}(h, -\mathrm{tr}\,h) : h\in \mathbb{C}^n\}.$$
+The corresponding root system and one of its bases are
+$$A_{n-1}:= \{\varepsilon_j - \varepsilon_k :1\le j, k \ne  1\neq n-1 \};
+$$
+$$
+\Delta =\{\varepsilon _j-\varepsilon _{j+1}|j=1,...,n\}.
+$$
+\item $B_n$ ($n\geq2$): When $\mathfrak{g=so}_{2n + 1}(\mathbb{C})$
+$$\mathfrak{h} = \mathrm{span}\{E_{j} - E_{n+j} : j = 1, \ldots, n\} = \{\mathrm{diag}(h, -h, 0) : h \in \mathbb{C}^n\}.$$
+The corresponding root system and one of its bases are
+\[
+B_n := \{\pm \varepsilon_j, \pm \varepsilon_j \pm \varepsilon_k : j, k = 1, \ldots, n, j \neq k\};
+\]
+$$
+\Delta =\{\varepsilon _j-\varepsilon _{j+1}|j=1,...,n-1\}\cup \left\{ \varepsilon _n \right\} .
+$$
+\item $C_n$ ($n\geq3$): When $\mathfrak{g=sp}_{2n}(\mathbb{C})$
+$$\mathfrak{h} = \mathrm{span}\{E_{j} - E_{n+j} : j = 1, \ldots, n\} = \{\mathrm{diag}(h, -h) : h \in \mathbb{C}^n\}.$$
+The corresponding root system and one of its bases are
+$$C_n := \{\pm 2\varepsilon_j, \pm \varepsilon_j \pm \varepsilon_k : j, k = 1, \ldots, n, j \neq k\};$$
+$$
+\Delta =\{\varepsilon _j-\varepsilon _{j+1}|j=1,...,n-1\}\cup \left\{ 2\varepsilon _n \right\} .
+$$
+\item $D_n$ ($n\geq4$): When $\mathfrak{g=so}_{2n}(\mathbb{C})$
+$$\mathfrak{h} = \mathrm{span}\{E_{j} - E_{n+j} : j = 1, \ldots, n\} = \{\mathrm{diag}(h, -h) : h \in \mathbb{C}^n\}.$$
+The corresponding root system and one of its bases are
+$$D_n := \{\pm \varepsilon_j \pm \varepsilon_k : j, k = 1, \ldots, n, j \neq k\};$$
+$$
+\Delta =\{\varepsilon _j-\varepsilon _{j+1}|j=1,...,n-1\}\cup \left\{ \varepsilon _{n-1}+\varepsilon _n \right\} .
+$$
+\end{itemize}
+\end{lem}
+
+\begin{proof}
+ The following proof is based on the example of type $A_n$ case and $C_n$ case,  as the proofs for other types are similar. 
+
+The $A_{n-1}$ case  : It is easy to know $\mathfrak{h}=\{\mathrm{diag}(a_1,...,a_n)|a_1+...+a_n=0\}$ and
+$$
+\left( \mathrm{ad}h \right)\left( E_{ij} \right) =\left( h_i-h_j \right) E_{ij},\quad h=\mathrm{diag}(h_1,...,h_n).
+$$
+Further more
+$$\mathfrak{s} \mathfrak{l} _n=\mathfrak{h} \oplus \bigoplus_{i\ne j}{\mathbb{C} E_{ij}}.$$
+Then we can work out the corresponding root system is
+$$A_{n-1}:= \{\varepsilon_j - \varepsilon_k :1\le j, k \ne  1\neq n-1 \};$$
+
+For $C_n$ case, using
+$$\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+\in \mathfrak{sp}_n(\mathbb{C}) \quad \iff \quad
+d = -a^\top, \, b^\top = b, \, c^\top = c,$$
+we see that $\mathfrak{g} := \mathfrak{sp}_n(\mathbb{C})$ has an abelian subalgebra
+$$\mathfrak{h} = \mathrm{span}\{E_{j} - E_{n+j} : j = 1, \ldots, n\} = \{\mathrm{diag}(h, -h) : h \in \mathbb{C}^n\}.$$
+If $\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+\in Z_{\mathfrak{g}}(\mathfrak{h})$, then for all $h=\mathrm{diag}(h_1,...,h_n)\in M_n(\Bbb{C})$
+$$
+0=\left( \begin{matrix}
+	a&		b\\
+	c&		d\\
+\end{matrix} \right) 
+\left( \begin{matrix}
+	h&		\\
+	&		-h\\
+\end{matrix} \right) -
+\left( \begin{matrix}
+	h&		\\
+	&		-h\\
+\end{matrix} \right) 
+\left( \begin{matrix}
+	a&		b\\
+	c&		d\\
+\end{matrix} \right) 
+=
+\left( \begin{matrix}
+	ah-ha&		-bh-hb\\
+	ch+hc&		hd-dh\\
+\end{matrix} \right) .
+$$
+$ah=ha$ implies that $a$ is a diagonal matrix. $hb+bh=0$ implies that $b=0$. So $Z_{\mathfrak{g}}(\mathfrak{h})=\mathfrak{h}$. 
+Similarly, some of $E_{j,n+k}+E_{k,n+j}$ and $E_{n+k,j}+E_{n+j,k}$ form a basis of all $\mathfrak{g}_{\alpha}$. 
+
+Then we can work out the corresponding root system is
+$$C_n := \{\pm 2\varepsilon_j, \pm \varepsilon_j \pm \varepsilon_k : j, k = 1, \ldots, n, j \neq k\}.$$
+\end{proof}
+
+
+\begin{lem}[Generators of Weyl group]
+
+Let $\Delta$ be a base of $\Phi$, then (refer to \cite{GTM09}) the Weyl group 
+$$W :=\left< \sigma _{\alpha}:\alpha \in \Phi \right> =\left< \sigma _{\alpha}:\alpha \in \Delta \right>$$
+\end{lem}
+
+\begin{lem}\label{lem:2}
+If the following conditions hold: 
+\begin{enumerate}
+    \item $E_1$ is a subspace of $E_2$ as a Euclidean space such that $E_2 = E_1 \oplus E_1^{\bot}$, when $E_1^{\bot} = \mathbb{R} \varepsilon$.
+    \item  $H_1 $ subgroup of $O(E_1)$ and $H_2$ subgroup of $O(E_2)$.
+    \item  For all $\sigma \in H_2, \sigma(\varepsilon) = \varepsilon$.
+    \item $H_1 = \{\sigma|_{E_1} : \sigma \in H_2\}$.
+\end{enumerate}
+Then $H_1 \simeq H_2$.
+\end{lem}
+\begin{proof}
+There is a surjective homomorphism $\varphi : H_2 \longrightarrow H_1,\,\, \sigma \longmapsto \sigma|_{E_1}$.
+Its kernel is $$\mathrm{Ker}(\varphi) = \{\sigma \in H_2 : \sigma|_{E_1} = \mathrm{id}_{E_1}, \sigma(\varepsilon) = \varepsilon\} = \{\mathrm{id}\}.$$
+Thus, it is an isomorphism.
+\end{proof}
+
+\begin{lem}[\cite{LA}Weyl group of classical simple Lie algebra]
+Let $W$ be the Weyl group of $\mathfrak{g}$, then we have the following results.
+\begin{itemize}
+\item Type $A_{n-1}$ case: $W\simeq S_n$ with natural action ($E_j:=E_{jj}$) generated by
+$$\sigma _{\varepsilon_k-\varepsilon_{k+1}}\left( E_{j} \right) =E_{\pi \left( j \right)},\pi =\left( k,k+1 \right) \in S_n.$$
+\item Type $B_n$ case: $W\simeq S_n \ltimes \mathbb{Z}^{n}$ with natural action ($e_j:=E_{jj}-E_{n+j,n+j}$) generated by 
+$$\sigma _{\varepsilon_k-\varepsilon_{k+1}}\left( e_{j} \right) =e_{\pi \left( j \right)},\pi =\left( k,k+1 \right) \in S_n;$$
+$$
+\sigma _{\varepsilon _n}\left( e_n\right) =-e_n.
+$$
+\item Type $C_n$ case:  $W\simeq S_n \ltimes \mathbb{Z}^{n}$ with natural action ($e_j:=E_{jj}-E_{n+j,n+j}$) generated by
+$$\sigma _{\varepsilon_k-\varepsilon_{k+1}}\left( e_{j} \right) =e_{\pi \left( j \right)},\pi =\left( k,k+1 \right) \in S_n;$$
+$$
+\sigma _{2\varepsilon _n}\left( e_n \right) =-e_n.
+$$
+\item Type $D_n$ case:  $W\simeq S_n \ltimes \mathbb{Z}^{n-1}$ with natural action ($e_j:=E_{jj}-E_{n+j,n+j}$) generated by
+$$\sigma _{\varepsilon_k-\varepsilon_{k+1}}\left( e_{j} \right) =e_{\pi \left( j \right)},\pi =\left( k,k+1 \right) \in S_n;$$
+$$
+\sigma _{\varepsilon _n+\varepsilon _{n-1}}\left( e_j\right) =-e_j, \quad j\in\{n-1,n\}.
+$$
+\end{itemize}
+\end{lem}
+
+\begin{proof}
+ Type $A_{n-1}$ case: We claim that $$\kappa \left( x,y \right) =2n\mathrm{tr}\left( xy \right) ,\forall x,y\in \mathfrak{h}$$
+Let $h=\mathrm{diag}(h_1,...,h_n)\in M_n(\Bbb{C})$, for
+$\left( \mathrm{ad}h \right) ^2\left( E_{ij} \right) =\left( h_i-h_j \right) ^2E_{ij}$
+we know 
+$$
+\begin{aligned}
+	\kappa \left( h,h \right) &=\sum_{i\ne j}{\left( h_i-h_j \right) ^2}=2\sum_{i<j}{\left( h_i-h_j \right) ^2}\\
+	&=2\sum_{i<j}{\left( h_i-h_j \right) h_i}+2\sum_{i<j}{\left( h_j-h_i \right) h_j}\\
+	&=2\sum_{i=1}^{n-1}{h_i\sum_{j=i+1}^n{\left( h_i-h_j \right)}}+2\sum_{j=2}^n{h_j\sum_{i=1}^{j-1}{\left( h_j-h_i \right)}}\\
+	&=2\sum_{i=1}^n{h_i\sum_{j=i}^n{\left( h_i-h_j \right)}}+2\sum_{i=1}^n{h_i\sum_{j=1}^{i-1}{2\left( h_i-h_j \right)}}\\
+	&=\sum_{i=1}^n{h_i\sum_{j=1}^n{2\left( h_i-h_j \right)}}=2n\sum_{i=1}^n{h_{i}^{2}}=2n\mathrm{tr}\left( h^2 \right).
+\end{aligned}
+$$
+By  $\kappa \left( x,y \right) =\frac{1}{4}\left[ \kappa \left( x+y,x+y \right) -\kappa \left( x-y,x-y \right) \right] $, our claim holds. 
+More precisely 
+$$
+\sigma _{\alpha}\left( E_j \right) =e_j-\frac{2\mathrm{tr}\left( E_jt_{\alpha} \right)}{\mathrm{tr}\left( {t_{\alpha}}^2 \right)}t_{\alpha},\quad t_{\varepsilon _i}=E_i-E_{n+1}.
+$$
+Then we can work out the action, and conclude that
+$$H_2:=\left< \sigma _{e_k-e_{k+1}}|k=1,...,n-1 \right> 
+\simeq \left< \left( k,k+1 \right) \in S_n|k=1,...,n-1 \right> =S_n, $$
+and let $\varepsilon  =e_1+e_2+....+e_n,E_1=\varepsilon ^{\bot}=\mathfrak{h}$, by \ref{lem:2} we have
+$$W =\left\{ \sigma |_{E_1}:\sigma \in H_2 \right\}\simeq H_2\simeq S_n.$$
+The type $D_n,B_n$ case is similar to $C_n$ case.  Let us consider the $C_n$ case and identify $\mathfrak{g=sp}_n(\mathbb{C}) $ as a subalgebra of $\mathfrak{sl}_{2n}(\mathbb{C})$, the killing form $$\kappa \left( x,y \right) =4n\mathrm{tr}\left( xy \right) ,\,\forall x,y\in \mathfrak{h}$$
+then we can work out all reflections in a similar way.
+\end{proof}
+
+\vspace{0.5cm}
+\section{Chevalley restriction theorem}
+In the section of Introduction, we have stated the Chevalley restriction theorem.
+\begin{thm}[Chevalley restriction theorem \cite{RTCG} ]
+The restriction of polynomial functions induces an isomorphism as \textbf{graded algebra}:
+$$
+\mathbb{C} \left[ \mathfrak{g} \right] ^G\cong \mathbb{C} \left[ \mathfrak{h} \right] ^W
+\qquad P\longmapsto P | _{\mathfrak{h}}.
+$$
+\end{thm}
+
+\begin{prop}[Type $A_{n-1}$ case]
+When $G=\mathrm{SL}_n,\,\mathfrak{g=sl}_n$, the induced map is an isomorphism.
+\end{prop}
+\begin{proof}
+We have known that $\mathfrak{h}=\{\mathrm{diag}(a_1,...,a_n)|a_i\in\Bbb{C} ,a_1+...+a_n=0\}$. Let $E_{i,j}$ denote the elementry matrix and $E_{k}:=E_{kk}$. Then polynomial function means  
+$$P\left( \displaystyle\sum_{i\ne j}{x_{i,j}E_{ij}+\displaystyle\sum_{k=1}^n{x_k}E_{kk}} \right) $$  are polynomials of $x_{i,j} $ and $x_k$ with the equation $$x_1+x_2+....+x_n=0.$$  Then we can identify the restriction map as 
+$$
+P\left( \sum_{i\ne j}{x_{i,j}E_{ij}+\sum_{k=1}^n{x_k}E_{kk}} \right) \longmapsto P|_{\mathfrak{h}}=P\left( \sum_{i\ne j}{0E_{ij}+\sum_{k=1}^n{x_k}E_{kk}} \right).
+$$
+Obviously the induced map is a homomorphism of graded algebra, the proof of this proposition is mainly divided into the following steps
+
+\textbf{Step 1:} $\mathbb{C} \left[ \mathfrak{h} \right] ^W=\mathbb{C} \left[ \sigma _2,...,\sigma _n \right] $, while $\sigma_1,\sigma_2,...,\sigma_n$  are  elementary symmetric polynomials with equation $\sigma_1=0.$
+\begin{proof}
+ The action $W=S_n$ acting on $\mathbb{C} \left[ \mathfrak{h} \right]
+$, is defined by
+$$\pi .P\left( \displaystyle\sum_{k=1}^n{x_k}E_{kk} \right) =P\left( \displaystyle\sum_{k=1}^n{x_{\pi \left( k \right)}}E_{kk} \right) , \quad \pi \in S_n. $$
+According to basic theorem of elementary symmetric polynomial, we have $$\mathbb{C} \left[ \mathfrak{h} \right] ^W\subseteq \mathbb{C} \left[ \sigma _1,\sigma _2,...,\sigma _n \right].$$
+For $\sigma_1=0$,  $\mathbb{C} \left[ \mathfrak{h} \right] ^W=\mathbb{C} \left[\sigma _2,...,\sigma _n \right].$
+\end{proof}
+
+\textbf{Step 2:}  $\mathbb{C} \left[ \tau _2,...,\tau _n \right] \subseteq \mathbb{C} \left[ \mathfrak{g} \right] ^G$, while  $\tau_2,..,\tau_n$ are some  polynomials such that
+$$
+\det \left( tI_n-\sum_{i\ne j}{x_{i,j}E_{ij}-\sum_{k=1}^n{x_k}E_{kk}} \right) =t^n-0t^{n-1}+\tau _2t^{n-2}-\tau _3t^{n-3}+...+\left( -1 \right) ^n\tau _n.
+$$
+\begin{proof}
+ It is welled known that $$\det \left( tI-g^{-1}Ag \right) =\det \left( tg^{-1}(I-A)g \right) =\det \left( tI-A \right). $$
+Thus, the polynomial coefficients are invariant under the adjoint $G$-action,  which implies that they are invariant polynomials. 
+\end{proof}
+
+\textbf{Step 3:} The induced map to $\Bbb{C}\left[ \mathfrak{h} \right] ^W$ is well defined.  
+\begin{proof}
+We can identify the restriction map as
+$$
+P\left( \sum_{i\ne j}{x_{i,j}E_{ij}+\sum_{k=1}^n{x_k}E_{kk}} \right) \longmapsto P|_{\mathfrak{h}}=P\left( \sum_{i\ne j}{0E_{ij}+\sum_{k=1}^n{x_k}E_{kk}} \right).
+$$
+So if $P\in \mathbb{C} \left[ \mathfrak{g} \right] ^G$, then
+$$
+P\left( g^{-1}Ag \right) =P\left( A \right) \Rightarrow P\left( \sum_{i\ne j}{x_{i,j}g^{-1}E_{ij}g+\sum_{k=1}^n{x_k}g^{-1}E_{kk}g} \right) =P\left( \sum_{i\ne j}{x_{i,j}E_{ij}+\sum_{k=1}^n{x_k}E_{kk}} \right).
+$$
+Let $x_{i,j}=0$,  the equation still holds, so we have $P|_{\mathfrak{h}} \in \mathbb{C} \left[ \mathfrak{h} \right] ^G$.
+According to the well-known linear algebra conclusion, these two matrices are conjugate 
+$$
+\sum_{k=1}^n{x_{\pi \left( k \right)}}E_{kk}\,\,,\sum_{k=1}^n{x_k}E_{kk}.
+$$
+So we have $P|_{\mathfrak{h}}\in \mathbb{C} \left[ \mathfrak{h} \right] ^G\subseteq \mathbb{C} \left[ \mathfrak{h} \right] ^W$. 
+\end{proof}
+
+\textbf{Step 4(Surjective)}:
+\begin{proof}
+In the equation 
+$$
+\det \left( tI_n-\sum_{i\ne j}{x_{i,j}E_{ij}-\sum_{k=1}^n{x_k}E_{kk}} \right) =t^n-0t^{n-1}+\tau _2t^{n-2}-\tau _3t^{n-3}+...+\left( -1 \right) ^n\tau _n.
+$$
+Let $x_{i,j}=0$, we have $\tau _i|_{\mathfrak{h}}=\sigma _i \forall i=2,...,n$ , which generate $\Bbb{C}[\mathfrak{h}]^W$. Obviously
+$$
+P\left( \tau _2,...,\tau _n \right) |_{\mathfrak{h}}=P\left( \tau _2|_{\mathfrak{h}},...,\tau _n|_{\mathfrak{h}} \right) =P\left( \sigma _2,...,\sigma _n \right).
+$$
+Thus $\mathrm{Im}\, \varphi=\Bbb{C}[\mathfrak{h}]^W$.  
+\end{proof}
+
+\textbf{Step 5(Injective)}: It suffices to show that $\mathrm{Ker}\,\varphi=0$ . 
+
+\begin{proof}
+Let $P\in\mathrm{ker}\,\varphi$, then $P(\mathfrak{h})=\{0\}$ and  for all $(x,g)\in\mathfrak{g}\times G$ 
+$$P(g^{-1}xg)=P(x).$$
+We denote 
+$$
+\mathfrak{g}^s=\{g^{-1}hg|g\in \mathrm{GL}_n,\,h\in\mathfrak{h}\}=\{g^{-1}hg|g\in \mathrm{SL}_n,\,h\in\mathfrak{h}\}
+$$
+the set of diagonalizable elements. Then we have $P(\mathfrak{g}^s)=\{0\}$. For $P$ is a continuous function, it suffices to show that $\mathfrak{g}^s$ is dense in $\mathfrak{g}$ .
+
+Let $x \in \mathfrak{g}$ , we construct  a sequence $\{x_k\}$ in $\mathfrak{g}^s$ such that $\displaystyle\lim_{k\to \infty}x_k= x.$ We know there exists $g\in G$ such that 
+$$
+g^{-1}xg=\left( \begin{matrix}
+	J\left( \lambda _1,n_1 \right)&		&		&		\\
+	&		J\left( \lambda _2,n_2 \right)&		&		\\
+	&		&		\ddots&		\\
+	&		&		&		J\left( \lambda _r,n_r \right)\\
+\end{matrix} \right),\quad J\left( \lambda_j,n_j \right) =\left( \begin{matrix}
+	\lambda_j&		1&		&		&		\\
+	&		\lambda_j&		1&		&		\\
+	&		&		\ddots&		&		\\
+	&		&		&		\lambda_j&		1\\
+	&		&		&		&		\lambda_j\\
+\end{matrix} \right) _{n_j\times n_j}.
+$$
+So let
+$$
+g^{-1}x_kg=\left( \begin{matrix}
+	A_{k,1}&		&		&		\\
+	&		A_{k,2}&		&		\\
+	&		&		\ddots&		\\
+	&		&		&		A_{k,r}\\
+\end{matrix} \right),\quad A_{k,j}=\left( \begin{matrix}
+	\lambda_j&		1&		&		&		\\
+	&		\lambda_j&		1&		&		\\
+	&		&		\ddots&		&		\\
+	&		&		&		\lambda_j&		1\\
+	\frac{1}{k}&		&		&		&		\lambda_j\\
+\end{matrix} \right) _{n_j\times n_j},
+$$
+then for all $j$, we have $$\underset{k\rightarrow \infty}{\lim}A_{k,j}=J\left( \lambda_j ,n_j \right).$$ Thus 
+$$
+\underset{k\rightarrow \infty}{\lim}x_k=\underset{k\rightarrow \infty}{\lim}g\left( \begin{matrix}
+	A_{k,1}&		&		\\
+	&		\ddots&		\\
+	&		&		A_{k,r}\\
+\end{matrix} \right) g^{-1}=g\left( \begin{matrix}
+	J\left( \lambda _1,n_1 \right)&		&		\\
+	&		\ddots&		\\
+	&		&		J\left( \lambda _r,n_r \right)\\
+\end{matrix} \right) g^{-1}=x,
+$$
+and the characteristic polynomials 
+$$
+\det \left( \lambda I-A_{k,j} \right) =\left| \begin{matrix}
+	\lambda -\lambda _j&		-1&		&		&		\\
+	&		\lambda -\lambda _j&		-1&		&		\\
+	&		&		\lambda -\lambda _j&		&		\\
+	&		&		&		\ddots&		-1\\
+	\frac{1}{k}&		&		&		&		\lambda -\lambda _j\\
+\end{matrix} \right|_{n_j\times n_j}=\left( \lambda -\lambda _j \right) ^{n_j}-\frac{1}{k}
+$$
+do not have multiple roots, so $A_{k,j}$ is diagonalizable, so does $x_k$. This proof ends.   
+\end{proof}
+
+In summary, we have proved that  the induced map is  an isomorphism. 
+\end{proof}
+
+\begin{cor*}[Generators]
+When $G=\mathrm{SL}_n,\,\mathfrak{g=sl}_n$, we have found out all generators of invariant polynomials. In other words $\Bbb{C}\left[\mathfrak{g}\right]^G=\Bbb{C}[\tau_2,..,\tau_n].$
+\end{cor*}
+\begin{proof}
+If there a polynomial function $P:\Bbb{C}^{n-1} \to \Bbb{C}$ such that $P(\sigma_2,...,\sigma_n)=0$, then for all $(z_2,...,z_{n}) \in \Bbb{C}^{n-1}$ , consider the polynomial equation
+$$
+T^n-0T^{n-1}+z_2T^{n-2}-z_3T^{n-2}+...+\left( -1 \right) ^nz_n=0,
+$$
+the equation have $n$ solution $t_1,...,t_n $, by Vieta theorem so the equations 
+$$
+\sigma _1\left( x_1,...,x_n \right) =0,\sigma _2\left( x_1,...,x_n \right) =z_2,...,\sigma _n\left( x_1,...,x_n \right) =z_n
+$$
+have a solution $\left( x_1,...,x_n \right) =\left( t_1,...,t_n \right) $, this means
+$$
+P\left( z_2,...,z_n \right) =0,\forall \left( z_2,...,z_n \right) \in \mathbb{C} ^{n-1}.
+$$
+Thus $P=0$ . We have proved that the generators $\sigma_2,...,\sigma_n$ are algebraically independent. Similarly, we can prove $\tau_2,..,\tau_n$ are algebraically independent using the characteristic polynomial.
+\end{proof} 
+
+\begin{prop}[Type $B_n$ Case]
+ When $G=\mathrm{SO}_{2n+1}(\Bbb{C})$, the induced map is surjective. In addition, 
+$$
+\mathbb{C} \left[ \mathfrak{h} \right] ^W=\mathbb{C} \left[ \sigma _1,...,\sigma _n \right] ,\quad \sigma _k\left( x_1,...,x_n \right) :=\sum_{i_1<...<i_k}{\left( x_{i_1}...x_{i_k} \right) ^2}
+$$
+\end{prop}
+\begin{proof}
+We have known that in this case $\mathfrak{g=so}_{2n + 1}(\mathbb{C})$ and one of Cartan subalgebra is
+$$\mathfrak{h} = \mathrm{span}\{E_{j} - E_{n+j} : j = 1, \ldots, n\} = \{\mathrm{diag}(h, -h, 0) : h \in \mathbb{C}^n\}.$$
+And the Weyl group $W\simeq S_n \ltimes \mathbb{Z}^{n}$ with natural action ($e_j:=E_{jj}-E_{n+j,n+j}$) generated by 
+$$\sigma _{\varepsilon_k-\varepsilon_{k+1}}\left( e_{j} \right) =e_{\pi \left( j \right)},\pi =\left( k,k+1 \right) \in S_n;$$
+$$
+\sigma _{\varepsilon _n}\left( e_n\right) =-e_n;
+$$
+Let us identify $x\in  \mathfrak{h}$ as $x=(x_1,...,x_n)\in \Bbb{C}$, then $$
+\sigma _{\varepsilon _n}P\left( x_1,...,x_n \right) =P\left( x_1,...,-x_n \right) ;
+$$
+$$
+\sigma _{\varepsilon _k-\varepsilon _{k+1}}P\left( x_1,...,x_n \right) =P\left( x_{\pi \left( 1 \right)},...,x_{\pi \left( n \right)} \right) ,\pi =\left( k,k+1 \right) \in S_n.
+$$
+So $$
+\mathbb{C} \left[ \mathfrak{h} \right] ^W\subseteq \mathbb{C} \left[ x_{1}^{2},...,x_{n}^{2} \right] ^{S_n}=\mathbb{C} \left[ \sigma _1,...,\sigma _n \right] ,\quad \sigma _k\left( x_1,...,x_n \right) :=\sum_{i_1<...<i_k}{\left( x_{i_1}...x_{i_k} \right) ^2}.
+$$
+In addition, the generators $\sigma_i$ are coefficients of (with $h=$diag$(x_1,...,x_n)$ )
+$$
+\det \left( tI-\left( \begin{matrix}
+	h&		&		\\
+	&		-h&		\\
+	&		&		0\\
+\end{matrix} \right) \right) =t\left( t^2-x_{1}^{2} \right) ...\left( t^2-x_{n}^{2} \right) .
+$$
+Similarly 
+$$
+\det \left( tI-\left( \begin{matrix}
+	a&		b&		y\\
+	c&		-a^T&		z\\
+	y&		z&		f\\
+\end{matrix} \right) \right) =t\sum_{k=0}^{n}{\left( -1 \right) ^{k}\tau _k}t^{2n-2k}
+$$
+is $G$-invariant and we have $\tau_k$ is $G$-invariant such that $\tau_{k}|\mathfrak{h}=\sigma_{k}$. Thus, the induced map is surjective. 
+\end{proof}
+
+
+\begin{prop}[Type $C_n$ case]
+When $G=\mathrm{sp}_{2n}(\Bbb{C})$, the induced map is surjective. In addition,
+$$
+\mathbb{C}\left[ \mathfrak{h} \right] ^W=\mathbb{C} \left[ \sigma _1,...,\sigma _n \right] ,\quad \sigma _k\left( x_1,...,x_n \right) :=\sum_{i_1<...<i_k}{\left( x_{i_1}...x_{i_k} \right) ^2}.
+$$
+\end{prop}
+\begin{proof}
+  It is entirely similar to the proof of type $B_n$ case.  
+\end{proof}
+
+
+\begin{prop}[Type $D_n$ case]
+ When $G=\mathrm{SO}_{2n}(\Bbb{C})$, the induced map is surjective. In addition,
+$$
+\mathbb{C} \left[ \mathfrak{h} \right] ^W=\mathbb{C} \left[ \sigma _1,...,\sigma _{n-1},x_1x_2..x_n \right] ,\quad \sigma _k\left( x_1,...,x_n \right) :=\sum_{i_1<...<i_k}{\left( x_{i_1}...x_{i_k} \right) ^2}.
+$$
+\end{prop}
+\begin{proof}
+ Let us identify $x\in  \mathfrak{h}$ as $x=(x_1,...,x_n)\in \Bbb{C}$, then 
+$$
+\sigma_{\varepsilon_n+\varepsilon_{n-1}}P\left( x_1,...,x_{n-1},x_n \right) =P\left( x_1,...,-x_{n-1},-x_n \right) ;
+$$
+$$
+\sigma _{\varepsilon _k-\varepsilon _{k+1}}P\left( x_1,...,x_n \right) =P\left( x_{\pi \left( 1 \right)},...,x_{\pi \left( n \right)} \right) ,\pi =\left( k,k+1 \right) \in S_n.
+$$
+So $$
+\mathbb{C} \left[ x_{1}^{2},...,x_{n}^{2} \right] ^{S_n}=\mathbb{C} \left[ \sigma _1,...,\sigma _n \right]\subseteq  \mathbb{C} \left[ \mathfrak{h} \right] ^W ,\quad \sigma _k\left( x_1,...,x_n \right) :=\sum_{i_1<...<i_k}{\left( x_{i_1}...x_{i_k} \right) ^2}.
+$$
+While $x_1x_2...x_n$ are also a invariant polynomial, we can vertify that $\mathbb{C} \left[ \mathfrak{h} \right] ^W=\mathbb{C} \left[ \sigma _1,...,\sigma _{n-1},x_1x_2..x_n \right] $. 
+In addition, the generators $\sigma_i\,(i\le n-1)$ are coefficients of (with $h=$diag$(x_1,...,x_n)$ )
+$$
+\det \left( tI-\left( \begin{matrix}
+	h&		\\
+	&		-h\\
+\end{matrix} \right) \right) =\left( t^2-x_{1}^{2} \right) ...\left( t^2-x_{n}^{2} \right) .
+$$
+Similarly, using the coefficient of characteristic polynomial, we have $\tau_i(1\le n-1)$ are $G$- invariant polynomials such that $\tau_i|_{\mathfrak{h}}=\sigma_i (1\le n-1)$.  According to \ref{lem:1}  , we know $\exists u,\forall x\in \mathfrak{g},(uxu^{-1})^{\top} =-uxu^{-1}$, and the determinant of skew-sysmmetric matrix is the square of Pfaffian. So $\det x=\mathrm{Pf}\left( uxu^{-1} \right) ^2$. Thus $$
+\mathrm{Pf}\left( uxu^{-1} \right) =\sqrt{\det x}\in \mathbb{C} \left[ \mathfrak{g} \right] ^G,
+$$
+and its restriction on $\mathfrak{g}$ is $(\sqrt{-1})^nx_1x_2...x_n $. 
+\end{proof}
+
+\begin{defn}[rank and the regular element]
+Let us denote the space $$\mathfrak{g} _{x}^{a}:=\mathfrak{g} ^a\left( \mathrm{ad}\,x \right) :=\bigcup_{n\geqslant 1}{\mathrm{Ker}\left( a\mathrm{id}-\mathrm{ad}\,x \right) ^n}.$$
+    \begin{enumerate}
+    \item The number
+$$\mathrm{rank}(\mathfrak{g}) := \min \left\{ \dim \mathfrak{g}^{0}(\mathrm{ad} \, x) \mid x \in \mathfrak{g} \right\}.$$
+    is called the \textbf{rank} of $\mathfrak{g}$. 
+   \item An element $x \in \mathfrak{g}$ is called \textbf{regular} if $\dim \mathfrak{g}^{0}(\mathrm{ad} \, x)=\mathrm{rank}(\mathfrak{g})$.
+    \item We write $\mathfrak{g}^r$ for the set of regular elements in $\mathfrak{g}$ and $\mathfrak{g}^s$ for the set of semisimple elements in $\mathfrak{g}$.
+\end{enumerate}
+\end{defn}
+
+
+\begin{rem}
+Since $\dim \mathfrak{g}^{0}(\mathrm{ad}\, x)$ is the multiplicity of $0$ as a root of the characteristic polynomial
+$$\det(\mathrm{ad} \, x - t \mathrm{id}_\mathfrak{g})=\sum_{k = 0}^{n} p_k(x)t^k .$$
+    of $\mathrm{ad}\,x$, we have
+    $$\mathrm{rank}(\mathfrak{g})=\min \left\{ k \in \mathbb{N} \mid p_k \neq 0 \right\}.$$  
+Let $\{e_j,1\le j\le n\}$ be a basis of $\mathfrak{g}$ and $[e_i,e_j]=\sum_{k=1}^n a_{i,j}^ke_k,\quad
+x=\sum_{i=1}^n{x_ie_i}$ then
+$$
+\mathrm{ad}\,x\left( e_j \right) =\left[ x,e_j \right] =\sum_{i=1}^n{x_i[e_i,e_j]}=\sum_{i=1}^n{\sum_{k=1}^n{a_{i,j}^{k}}x_ie_k}=\sum_{k=1}^n{\left( \sum_{i=1}^n{a_{i,j}^{k}}x_i \right) e_k}.
+$$
+So the entries of the matrix of $\mathrm{ad}\,x$ are linear combination of $x_i$, which implies that all the functions $p_k: \mathfrak{g} \to \Bbb{C}$  are polynomials.
+
+Since the characteristic polynomial is invariant under adjoint action, we can immediately conclude the following.
+\end{rem}
+
+\begin{lem}[Chap.6 in \cite{SGLG} ]\label{lem:3}
+The polynomial $p_r(x)\in \Bbb{C}[\mathfrak{g}]^G$ and 
+$$
+\mathfrak{g} ^r=\left\{ x\in \mathfrak{g} |p_r\left( x \right) \ne 0 \right\} .
+$$
+In addtion, $\mathfrak{g} ^r$ is an open, $G$-stable,  dense and connected subset of $\mathfrak{g}$. 
+\end{lem}
+\begin{proof}
+The proof of this lemma about dense and connected in the reference book  \cite{SGLG} uses the results of Exercise 6.1.2 and 6.1.2. Next, I will prove the results of these two exercises.
+
+To show that the set is dense in $\mathfrak{g}$, equivalently, $Z:=\{x\in \Bbb{C}^n:p(x)=0\}$ has no interior points, where $p$ is a non-constant polynomial. Otherwise, if $p(x)=0, \forall x \in B(x_0,r)$, then using the Taylor expansion at $x=x_0$, $$
+p\left( x \right) =\sum_{|\alpha |=k}^{\mathrm{deg}\,p}{\frac{\partial ^{\alpha}p\left( x_0 \right)}{\alpha !}\left( x-x_0 \right) ^{\alpha}},\quad \alpha =\left( \alpha _1,..,\alpha _n \right) ,
+$$
+we can obtain $p=0$. 
+
+To show that the set $X=\mathfrak{g} ^r = \{ x \in \mathfrak{g} \mid p(x) \ne 0 \}$ is connected, we consider the properties of complex algebraic varieties and their complements.  
+
+First, recall that $\mathbb{C}^n$ is homeomorphic to $\mathbb{R}^{2n}$, which is connected. The zero set of a non-constant polynomial $p(x)$, denoted $Z = \{ x \in \mathbb{C}^n \mid p_r(x) = 0 \}$, is a proper algebraic subset of $\mathbb{C}^n$. Specifically, $Z$ is a complex hypersurface of complex dimension $n - 1$, which corresponds to real dimension $2n - 2$ in $\mathbb{R}^{2n}$. 
+
+In topology, removing a subset of codimension greater than 1 from a manifold does not disconnect the manifold. Since $Z$ has real codimension 2 in $\mathbb{R}^{2n}$, removing $Z$ from $\mathbb{R}^{2n}$ does not disconnect it. Therefore, the complement $X = \mathbb{C}^n \setminus Z$ remains connected.
+
+Therefore, the set $X = \mathfrak{g} ^r $ is connected.
+\end{proof}
+
+\begin{lem}[Chap.6 in \cite{SGLG} ]
+ Let $\mathfrak{g}$ be semisimple Lie algebra over $\Bbb{C}$ and $\mathfrak{h}$ be a Cartan subalgebra , then 
+\begin{enumerate}
+    \item If $
+\Delta =\Delta \left( \mathfrak{g} ,\mathfrak{h} \right) 
+$ be a base, then
+$$
+\mathfrak{g} ^r\cap \mathfrak{h} =\mathfrak{h} \backslash \bigcup_{\alpha \in \Delta}{\mathrm{Ker}}\alpha \ne\emptyset.
+$$
+\item  For all $x\in \mathfrak{g}^r$, the space $\mathfrak{g}^0_{x}$  form a Cartan subalgebra.
+\item For all $x\in\mathfrak{g}^r\cap \mathfrak{h}$ , we have $\mathfrak{h}=\mathfrak{g}^0_{x}$. 
+\item Every regular element in $\mathfrak{g}$ is simisimple. In other words
+$$
+\mathfrak{g} ^r\cap \mathfrak{g} ^s=\mathfrak{g} ^r.
+$$
+\end{enumerate}
+\end{lem}
+\begin{cor*}
+    Let $H$ be the set of  Cartan subalgebras of  $\mathfrak{g}$, then $$
+\mathfrak{g} ^r\subseteq \bigcup_{\mathfrak{h} \in H}{\mathfrak{h}}.
+$$\end{cor*}
+\begin{proof}
+If $x\in \mathfrak{g}^r$, then $x\in \mathfrak{g}^0_x=\mathfrak{h}$, which is a Cartan subalgebra.
+\end{proof}
+
+\begin{lem}[Chap.6 in \cite{SGLG} ]
+$\mathrm{Inn}(\mathfrak{g})$ acts transitively on the set of Cartan subalgebra of $\mathfrak{g}$.   In other words, if we fixed a Cartan subalgebra, then 
+$$
+H=\left\{ g\mathfrak{h} |g\in \mathrm{Inn}\left( \mathfrak{g} \right) \right\} \Rightarrow \mathfrak{g} ^r\subseteq \bigcup_{g\in \mathrm{Inn}\left( \mathfrak{g} \right)}{g\mathfrak{h}}\subseteq \bigcup_{g\in G}{g\mathfrak{h}g^{-1}}.
+$$
+\end{lem}
+
+
+\begin{prop}[Injective]
+ For general complex connected Lie group, the induced map  is an injection.  
+\end{prop}
+\begin{proof}
+ Let $P\in \Bbb{C}[\mathfrak{h}]^W$ such that $P|_{\mathfrak{h}}=0$, then we have
+$$
+\forall x\in \bigcup_{g\in G}{g\mathfrak{h}g^{-1}}, \,P(x)=0.
+$$
+By the lemma above, we have 
+$$
+\forall x\in \mathfrak{g}^r,P(x)=0, \quad \mathfrak{g}^r
+=\{p_r(x)\ne 0|x\in \mathfrak{g}\}.
+$$
+But \ref{lem:3} we have known that $\mathfrak{g}^r$ dense in $\mathfrak{g}$,  which implies $P=0$. 
+
+In summary , we have proved the kernel of the induced map is 0. 
+\end{proof}
+
+\vspace{0.5cm}
+\section{Conclusion and Future Work}
+I have proved that the Chevalley restriction theorem holds true for the case of classical simple Lie groups, and worked out the concrete generators of the invariant polynomial functions in $\Bbb{C}[\mathfrak{g}]^G$ and $\Bbb{C}[\mathfrak{h}]^W$.
+
+In the future, I will strive to calculate the generators in the Chevalley restriction theorem for exceptional complex simple Lie algebras, and prove that  the induced map is also a surjection for general complex semisimple Lie groups.
+
+
+
+\begin{thebibliography}{99}
+\bibitem{GTM09}
+James E.Humphreys,* Introduction to Lie Algebra and Representation Theory GTM 9*,Springer, 1972. Chap 1-11.
+\bibitem{SGLG}
+Joachim Hilgert and Karl-Hermann Neeb:Structure and Geometry
+ of Lie Groups\\
+https://softbank.iust.ac.ir/MathBooks/N/Neeb%20and%20Hilgert%20-%20Structure%20and%20Geometry%20of%20Lie%20Groups.pdf
+\bibitem{RTCG}
+Neil Chriss and Victor Ginzburg, *Representation Theory and Complex Geometry*, Springer, 1997. Section 3.1.37.\\
+https://link.springer.com/book/10.1007/978-0-8176-4938-8
+\bibitem{LA}
+Zhexian Wan,*Lie Algebra(second ediction)*,Higher Education Press,2013,Section 6.2-6.3
+\bibitem{CN}
+Chen, T. H. and Ng\^o, B. C.: On the Hitchin fibration for algebraic surfaces. arXiv: 1711.02592v2 (2018).
+\end{thebibliography}
+
+{\color{red}try to use bibtex for references}
+
+\bigskip
+\noindent\small{\textsc{Department of Mathematics, South China University of Technology}\\
+\emph{E-mail address}:  \texttt{lmnjkljh@sina.com}
+
+\end{document}
+

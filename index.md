@@ -77,7 +77,7 @@ TBA (待定，预计是用表示论解决量子信息中的某个小问题)
   <tr>
     <td>2025.07.12–07.25 </td>
     <td>中科院信工所「密码与数学」暑校 组长、优秀学员 </td>
-    <td> <a href="挑战题汇报_第二组.pdf"> 挑战题汇报 </a></td>
+    <td> <a href="挑战题汇报_第二组.pdf"> 挑战题汇报</a>  <a href="计算数论与公钥密码体制.pdf">计算数论与公钥密码体制</a> <a href="Lattice.pdf">Lattice</a></td>
   </tr>
   <tr>
     <td>2024.07.14–08.23 </td>
@@ -85,7 +85,6 @@ TBA (待定，预计是用表示论解决量子信息中的某个小问题)
     <td> <a href="https://zhuanlan.zhihu.com/p/715481139">感悟</a>  <a href="代数数论.pdf">数论笔记</a> </td>
   </tr>
 </table>
-
 
 ### 教学实践
 <table>
@@ -115,6 +114,8 @@ TBA (待定，预计是用表示论解决量子信息中的某个小问题)
     <td> <a href="高等代数复习.pdf">高等代数复习</a> </td>
   </tr>
 </table>
+
+其他学习资料：<a href="GTM52重排.pdf">GTM52重排</a>  <a href="Zorich数学分析.pdf">Zorich数学分析笔记</a>  <a href="群论与数论1.pdf">群论与数论</a>
 
 ---
 

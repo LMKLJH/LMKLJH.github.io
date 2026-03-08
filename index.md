@@ -17,7 +17,7 @@ permalink: /
     <li><a href="#兴趣方向" style="color: #4299e1; text-decoration: none;">兴趣方向</a></li>
     <li><a href="#获奖经历" style="color: #4299e1; text-decoration: none;">获奖经历</a></li>
     <li><a href="#科研训练" style="color: #4299e1; text-decoration: none;">科研训练</a></li>
-    <li><a href="#教学实践" style="color: #4299e1; text-decoration: none;">教学实践</a></li>
+    <li><a href="#交流与实践" style="color: #4299e1; text-decoration: none;">交流与实践</a></li>
   </ul>
 </div>
 
@@ -45,7 +45,7 @@ permalink: /
   <tr><th>时间</th><th>内容</th></tr>
   <tr><td>2025.06</td><td>第十六届丘成桐大学生数学竞赛 笔试优胜奖 <a href="https://www2.scut.edu.cn/math/2025/0625/c10149a595030/page.htm">学院新闻</a></td></tr>
   <tr><td>2024.10</td><td>全国大学生数学竞赛 广东省一等奖</td></tr>
-  <tr><td>2024.12</td><td>国家奖学金</td></tr>
+  <tr><td>2024.12</td><td>国家奖学金、院级“三好学生”标兵</td></tr>
   <tr><td>2024.09</td><td>华南理工大学数学竞赛 第一名</td></tr>
 </table>
 
@@ -62,17 +62,21 @@ permalink: /
   1. 独立梳理李群-李代数对应、根系、Weyl群等基础理论；
   2. 对 Aₙ/Bₙ/Cₙ/Dₙ 四类典型单李代数，给出定理的独立完整显式证明；
   3. 明确各类不变多项式生成元；
+ 
+### 本科毕业设计
+TBA (待定，预计是表示论在量子信息中的应用的某个小问题)
 
-### 短期暑校经历
+---
+
+
+## 交流与实践
+
+### 暑校经历
 <table>
   <tr><th>时间</th><th>内容</th></tr>
   <tr><td>2025.07.12–07.25</td><td>中科院信工所「密码与数学」暑校 组长、优秀学员 <a href="挑战题汇报_第二组.pdf"> 挑战题汇报_第二组</a></td></tr>
   <tr><td>2024.07.14–08.23</td><td>中科院数学所「代数与数论」暑校 系统研修 <a href="https://zhuanlan.zhihu.com/p/715481139"> 收获总结</a></td></tr>
 </table>
-
----
-
-## 教学实践
 
 <table>
   <tr>
@@ -107,12 +111,13 @@ permalink: /
 ---
 
 ## About me (关于我)
+
 目前主要学习代数、分析与量子信息。
 
 ### 对数学产生浓厚兴趣的一段经历
 
    五年级时，我在竞赛中接触到 1/7 的循环节 142857，好奇是否存在更多类似规律。通过计算 1/97、1/997 等分数，我自主发现了循环节的等比增长规律，并推导出无穷等比数列求和公式。同年，我不满足于背诵圆周率，用三天时间反复画图演算、迭代试错，最终在电脑上实现了高精度圆周率计算算法，得到了与背诵值一致的结果。这段独自探索的经历，让我第一次体会到数学的创造性与探索乐趣，也让我从 “被动学习” 转向 “主动求知”。
    
-   更多具体的故事请看 <a href="https://www.zhihu.com/question/445363153/answer/3008923754">在学生时期独立地探索出自己的数学发现，是什么体验？</a>
+   具体的故事请看 <a href="https://www.zhihu.com/question/445363153/answer/3008923754">在学生时期独立地探索出自己的数学发现，是什么体验？</a>
 
   再聊点“题外话”，但是对自己的人生很重要的经历和反思。 <a href="https://github.com/LMKLJH/LMKLJH.github.io/blob/main/关于选择与人生的思考.md">othertalk</a>  

@@ -64,7 +64,7 @@ permalink: /
   3. 明确各类不变多项式生成元；
  
 ### 本科毕业设计
-TBA (待定，预计是表示论在量子信息中的应用的某个小问题)
+TBA (待定，预计是用表示论解决量子信息中的某个小问题)
 
 ---
 
@@ -78,6 +78,8 @@ TBA (待定，预计是表示论在量子信息中的应用的某个小问题)
   <tr><td>2024.07.14–08.23</td><td>中科院数学所「代数与数论」暑校 系统研修 <a href="https://zhuanlan.zhihu.com/p/715481139"> 收获总结</a></td></tr>
 </table>
 
+
+### 教学实践
 <table>
   <tr>
     <th>时间</th>
@@ -87,17 +89,22 @@ TBA (待定，预计是表示论在量子信息中的应用的某个小问题)
   <tr>
     <td>2023.12–至今</td>
     <td>数学讨论班主讲：代数学、微分流形、李群与李代数</td>
-    <td><a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/Rotman%20Algebra%20Part1.pdf">代数学教材</a></td>
+    <td><a href="Rotman%20Algebra%20Part1.pdf">Rotman代数教材1</a> <a href="Rotman%20Algebra%20Part2.pdf">Rotman代数教材2</a></td>
   </tr>
-  <tr>
-    <td>2024.12–至今</td>
-    <td>「学霸带我飞」辅学讲师：数学分析、高等代数辅导</td>
-    <td>无</td>
+    <tr>
+    <td>2025.11.08</td>
+    <td> 与深圳大学学子交流，做25分钟报告：从oppenheim 猜想到 Ratner 轨道定理 </td>
+    <td><a href="">投影片</a></td>
   </tr>
   <tr>
     <td>2025.12.21</td>
     <td>近世代数90分钟专题演讲：《有限域乘法群与二次互反律》</td>
-    <td><a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/有限域乘法群与二次互反律.pdf">下载投影片</a></td>
+    <td><a href="有限域乘法群与二次互反律.pdf">投影片</a></td>
+  </tr>
+    <tr>
+    <td>2024.12–至今</td>
+    <td>「学霸带我飞」辅学讲师：数学分析、高等代数辅导</td>
+    <td>无</td>
   </tr>
 </table>
 

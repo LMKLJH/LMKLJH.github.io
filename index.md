@@ -73,7 +73,7 @@ TBA (待定，预计是用表示论解决量子信息中的某个小问题)
 
 ### 暑校经历
 <table>
-  <tr><th>时间</th><th>内容</th><th>收获展示</th></tr>
+  <tr><th>时间</th><th>内容</th><th>相关资料</th></tr>
   <tr>
     <td>2025.07.12–07.25 </td>
     <td>中科院信工所「密码与数学」暑校 组长、优秀学员 </td>
@@ -82,7 +82,7 @@ TBA (待定，预计是用表示论解决量子信息中的某个小问题)
   <tr>
     <td>2024.07.14–08.23 </td>
     <td>中科院数学所「代数与数论」暑校 旁听生 </td>
-    <td> <a href="https://zhuanlan.zhihu.com/p/715481139"> 收获总结</a> </td>
+    <td> <a href="https://zhuanlan.zhihu.com/p/715481139"> 感悟 </a> <a href="代数数论.pdf">数论笔记</a> </td>
   </tr>
 </table>
 
@@ -97,12 +97,12 @@ TBA (待定，预计是用表示论解决量子信息中的某个小问题)
   <tr>
     <td>2023.12–至今</td>
     <td>数学讨论班主讲：代数学、微分流形、李群与李代数</td>
-    <td><a href="Rotman%20Algebra%20Part1.pdf">Rotman代数教材1</a> <a href="Rotman%20Algebra%20Part2.pdf">Rotman代数教材2</a></td>
+    <td><a href="Rotman%20Algebra%20Part1.pdf">Rotman代数1</a> <a href="Rotman%20Algebra%20Part2.pdf">Rotman代数2</a></td>
   </tr>
     <tr>
     <td>2025.11.08</td>
     <td> 与深圳大学学子交流，做25分钟报告：从oppenheim 猜想到 Ratner 轨道定理 </td>
-    <td><a href="">投影片</a></td>
+    <td><a href="报告：从Oppenheim猜想到Ratner轨道定理.pdf">投影片</a></td>
   </tr>
   <tr>
     <td>2025.12.21</td>
@@ -112,7 +112,7 @@ TBA (待定，预计是用表示论解决量子信息中的某个小问题)
     <tr>
     <td>2024.12–至今</td>
     <td>「学霸带我飞」辅学讲师：数学分析、高等代数辅导</td>
-    <td>无</td>
+    <td> <a href="高等代数复习.pdf">投影片</a> </td>
   </tr>
 </table>
 

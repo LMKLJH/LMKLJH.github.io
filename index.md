@@ -17,7 +17,6 @@ permalink: /
     <li><a href="#兴趣方向" style="color: #4299e1; text-decoration: none;">兴趣方向</a></li>
     <li><a href="#获奖经历" style="color: #4299e1; text-decoration: none;">获奖经历</a></li>
     <li><a href="#科研训练" style="color: #4299e1; text-decoration: none;">科研训练</a></li>
-    <li><a href="#获奖经历" style="color: #4299e1; text-decoration: none;">获奖经历</a></li>
     <li><a href="#教学实践" style="color: #4299e1; text-decoration: none;">教学实践</a></li>
   </ul>
 </div>

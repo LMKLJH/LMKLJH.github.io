@@ -1,18 +1,17 @@
-# 站点基础信息
-title: 梁家浩 | 个人主页  
+title: 梁家浩 | 个人主页
 url: "https://LMKLJH.github.io"
 baseurl: ""
 
-# 核心：换成数学友好主题（自带 MathJax）
-remote_theme: vsoch/jekyll-math@v1.0.0
+# 用最稳的 minima 主题，和你 Gemfile 里的依赖一致
+remote_theme: jekyll/minima@v2.5.1
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
+  - jekyll-seo-tag
 
-# 公式渲染配置（自动生效，无需额外 JS）
+# 只保留最基础的 Markdown 解析，不加任何公式配置
 markdown: kramdown
 kramdown:
-  math_engine: mathjax
   parse_block_html: true
 
 exclude:

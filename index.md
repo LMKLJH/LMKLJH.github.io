@@ -29,7 +29,7 @@ permalink: /
 
 ### 本科生研究项目（SRP）
 **指导老师：孙浩**
-- 学习报告：<a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/Chevalley_restriction_theorem_for_classical_simple_Lie_algebra.pdf">Chevalley restriction theorem for classical simple Lie algebra</a>
+- 结题论文：<a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/Chevalley_restriction_theorem_for_classical_simple_Lie_algebra.pdf">Chevalley restriction theorem for classical simple Lie algebra</a>
 - 方向：李群李代数、不变量理论
 - 时间：2024.04–2025.03
 - 核心工作：
@@ -82,7 +82,7 @@ permalink: /
 
 ## 联系
 - 邮箱：lmnjkljh[at]sina.com
-- GitHub：https://github.com/LMKLJH
+- GitHub：<a href="https://github.com/lmkljh">https://github.com/lmkljh</a>
 
 ---
 

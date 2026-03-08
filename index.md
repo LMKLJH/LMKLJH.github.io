@@ -6,7 +6,7 @@ permalink: /
 <!-- 照片+核心信息模块（仅姓名+联系方式，无教育经历） -->
 <div align="center">
   <img src="https://LMKLJH.github.io/myphoto.jpg" 
-       style="width: 180px; height: 180px; border-radius: 50%; border: 4px solid #e0e0e0; margin-bottom: 10px;">
+       style="width: 100px; height: 100px; border-radius: 50%; border: 4px solid #e0e0e0; margin-bottom: 10px;">
   <h2 style="margin: 0; color: #333; font-size: 1.8em;">梁家浩 (Jiahao Liang)</h2>
   <p style="color: #666; margin: 5px 0; font-size: 0.9em;">邮箱：lmnjkljh[at]sina.com | GitHub：<a href="https://github.com/lmkljh">lmkljh</a></p>
 </div>

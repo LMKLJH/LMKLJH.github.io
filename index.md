@@ -20,6 +20,7 @@ permalink: /
 
 <div align="center">
   <img src="https://LMKLJH.github.io/量子信息分支.jpg" 
+       alt="量子信息分支图" 
        style="max-width: 100%; height: auto; border: none; margin-bottom: 20px;">
 </div>
 

@@ -18,19 +18,15 @@ permalink: /
 ## 兴趣方向
 代数、分析及其在量子信息中的应用。目前在郑驻军老师指导下学习量子信息基础理论，未来希望从事量子信息与量子计算相关研究。
 
-<div align="center">
-  <img 
-    src="https://LMKLJH.github.io/量子信息分支.jpg" 
-    alt="量子信息分支图" 
-    style="
-      max-width: 100%;    /* 适配所有屏幕宽度 */
-      height: auto;       /* 核心：高度自动缩放，防拉伸 */
-      object-fit: contain;/* 兜底防变形 */
-      margin-bottom: 20px;
-    "
-  >
-</div>
+![量子信息分支图](https://LMKLJH.github.io/量子信息分支.jpg){: .center-image style="max-width: 100%; height: auto; object-fit: contain; margin-bottom: 20px;"}
 
+<style>
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 ---
 
 ## 获奖经历

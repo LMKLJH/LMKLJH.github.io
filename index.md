@@ -2,19 +2,6 @@
 layout: page
 permalink: /
 ---
-<!-- 只加这一段，公式就能显示（和站点无冲突） -->
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        processEscapes: true
-      }
-    };
-  });
-</script>
 
 <!-- 照片+核心信息模块（仅姓名+联系方式，无教育经历） -->
 <div align="center">

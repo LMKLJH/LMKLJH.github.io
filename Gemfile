@@ -1,13 +1,9 @@
-# 依赖源（固定写法）
 source "https://rubygems.org"
 
-# GitHub Pages 官方依赖（自动适配Jekyll版本，避免报错）
+# GitHub Pages 官方固定依赖（自动匹配兼容版本）
 gem "github-pages", "~> 231", group: :jekyll_plugins
+# 必须的插件（和官方版本对齐）
 gem "jekyll", "~> 4.3"
-
-# 极简主题依赖（确保dark皮肤生效）
-gem "jekyll-theme-minima", "~> 2.5"
-
-# 必备插件
-gem "jekyll-feed", "~> 0.15"
+gem "jekyll-remote-theme", "~> 0.4.3"
+gem "jekyll-feed", "~> 0.17"
 gem "jekyll-seo-tag", "~> 2.8"

@@ -3,7 +3,9 @@ layout: page
 permalink: /
 ---
 
-## 梁家浩 (Jiahao Liang)
+![梁家浩](https://LMKLJH.github.io/myphoto.jpg)
+
+## 教育经历
 华南理工大学 | 数学与应用数学 | 本科
 
 ---

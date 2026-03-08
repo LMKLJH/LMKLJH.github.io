@@ -82,7 +82,7 @@ TBA (待定，预计是用表示论解决量子信息中的某个小问题)
   <tr>
     <td>2024.07.14–08.23 </td>
     <td>中科院数学所「代数与数论」暑校 旁听生 </td>
-    <td> <a href="https://zhuanlan.zhihu.com/p/715481139"> 感悟 </a> <a href="代数数论.pdf">数论笔记</a> </td>
+    <td> <a href="https://zhuanlan.zhihu.com/p/715481139">感悟</a>  <a href="代数数论.pdf">数论笔记</a> </td>
   </tr>
 </table>
 

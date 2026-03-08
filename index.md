@@ -5,9 +5,9 @@ permalink: /
 
 <div align="center">
   <img src="https://LMKLJH.github.io/myphoto.jpg" 
-       style="width: 100px; height: 100px; border-radius: 50%; border: 4px solid #e0e0e0; margin-bottom: 10px;">
-  <h2 style="margin: 0; color: #333; font-size: 1.0em;">梁家浩(Jiahao Liang)</h2>
-  <p style="color: #666; margin: 5px 0; font-size: 0.5em;">邮箱：lmnjkljh[at]sina.com | GitHub：<a href="https://github.com/lmkljh">lmkljh</a></p>
+       style="width: 100px; height: 100px; border-radius: 50%; border: 1px solid #e0e0e0; margin-bottom: 10px;">
+  <h2 style="margin: 0; color: #333; font-size: 1.8em;">梁家浩(Jiahao Liang)</h2>
+  <p style="color: #666; margin: 5px 0; font-size: 1.2em;">邮箱：lmnjkljh[at]sina.com | GitHub：<a href="https://github.com/lmkljh">lmkljh</a></p>
 </div>
 
 <!-- 列表式目录 -->

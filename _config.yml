@@ -1,29 +1,20 @@
-# 站点基础信息
-title: 梁家浩 | 个人主页  
+title: 梁家浩 | 个人主页
 url: "https://LMKLJH.github.io"
 baseurl: ""
 
-# 用 GitHub 官方最稳定的 minima 主题
+# 用最稳的 minima 主题，和你 Gemfile 里的依赖一致
 remote_theme: jekyll/minima@v3.0.0
-
-# 核心：开启 LaTeX 原生支持
-markdown: kramdown
-kramdown:
-  parse_block_html: true
-  math_engine: mathjax  # 让 kramdown 原生解析 LaTeX 公式
-  math_engine_opts:
-    preview: true       # 预览模式，避免解析冲突
-    linebreaks: true    # 支持公式换行
-
-# 必须的插件（和 Gemfile 版本对齐）
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
 
-# 排除无关文件
+# 基础 Markdown 解析
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor

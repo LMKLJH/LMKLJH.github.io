@@ -30,7 +30,7 @@ permalink: /
 ## 兴趣方向
 代数、分析及其在量子信息中的应用。目前在郑驻军老师指导下学习量子信息基础理论，未来希望从事量子信息与量子计算相关研究。
 
-<p>访问次数：<img src="https://visitor-badge.laobi.icu/badge?page_id=LMKLJH" alt="visitor badge"></p>
+<img src="https://visitor-badge.laobi.icu/badge?page_id=LMKLJH" alt="visitor badge">
 
 <div align="center">
   <img src="https://LMKLJH.github.io/量子信息分支.jpg" 

@@ -3,6 +3,19 @@ layout: page
 permalink: /
 ---
 
+<!-- 列表式目录 -->
+<div align="left" style="max-width: 800px; margin: 0 auto 20px auto; padding: 10px; background: #f8f8f8; border-radius: 8px;">
+  <strong>📌 目录</strong>
+  <ul style="margin: 5px 0; padding-left: 20px;">
+    <li><a href="#教育经历" style="color: #4299e1; text-decoration: none;">教育经历</a></li>
+    <li><a href="#兴趣方向" style="color: #4299e1; text-decoration: none;">兴趣方向</a></li>
+    <li><a href="#获奖经历" style="color: #4299e1; text-decoration: none;">获奖经历</a></li>
+    <li><a href="#科研训练经历" style="color: #4299e1; text-decoration: none;">科研训练经历</a></li>
+    <li><a href="#获奖经历" style="color: #4299e1; text-decoration: none;">获奖经历</a></li>
+    <li><a href="#教学实践" style="color: #4299e1; text-decoration: none;">教学实践</a></li>
+  </ul>
+</div>
+
 <div align="center">
   <img src="https://LMKLJH.github.io/myphoto.jpg" 
        style="width: 100px; height: 100px; border-radius: 50%; border: 4px solid #e0e0e0; margin-bottom: 10px;">

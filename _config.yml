@@ -1,20 +1,22 @@
-title: 梁家浩 | 个人主页
+# 站点基础信息
+title: 梁家浩 | 个人主页  
 url: "https://LMKLJH.github.io"
 baseurl: ""
 
-# 用最稳的 minima 主题，和你 Gemfile 里的依赖一致
-remote_theme: jekyll/minima@v3.0.0
+# 关键：换掉 Minima 主题，用 Primer 主题（GitHub 同款）
+remote_theme: pages-themes/primer@v0.6.0
+# 关闭 Primer 主题的多余导航/标题
 plugins:
-  - jekyll-remote-theme
+  - jekyll-remote-theme  # 必须加这个插件，才能加载远程主题
   - jekyll-feed
-  - jekyll-seo-tag
 
-# 基础 Markdown 解析
+# 表格渲染配置（Primer 主题原生支持 Markdown 表格）
 markdown: kramdown
 kramdown:
   parse_block_html: true
 
+# 排除多余文件
 exclude:
   - Gemfile
   - Gemfile.lock
-  - node_modules
+  - node_modulesnode_modules

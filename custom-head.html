@@ -1,0 +1,27 @@
+<!-- 原生加载 MathJax，与 Jekyll 的 math_engine 联动 -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  // 标准化 MathJax 配置（与 kramdown 解析规则对齐）
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],    // 行内公式：\( 公式 \)
+      displayMath: [['\\[', '\\]']],   // 块级公式：\[ 公式 \]
+      processEscapes: true,            // 支持转义字符
+      autoload: {                     // 自动加载必要的 LaTeX 包
+        color: [],
+        colorv2: ['color']
+      },
+      packages: {'[+]': ['noerrors']}  // 容错，避免公式错误导致页面崩溃
+    },
+    svg: {
+      fontCache: 'global'              // 缓存字体，加载更快
+    },
+    startup: {
+      pageReady: () => {               // 页面加载完成后渲染公式
+        return MathJax.startup.defaultPageReady().then(() => {
+          MathJax.typeset();
+        });
+      }
+    }
+  };
+</script>

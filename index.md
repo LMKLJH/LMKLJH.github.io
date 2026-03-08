@@ -10,115 +10,30 @@ permalink: /
   <p style="color: #666; margin: 5px 0; font-size: 0.9em;">邮箱：lmnjkljh[at]sina.com | GitHub：<a href="https://github.com/lmkljh">lmkljh</a></p>
 </div>
 
-<!-- 绿色按钮风格横向目录（零乱码+自适应） -->
-<div style="
-  max-width: 90%;
-  margin: 20px auto;
-  padding: 15px;
-  background: #f8f8f8;
-  border-radius: 8px;
-  overflow: hidden;
-">
-  <div style="
-    display: flex;
-    flex-wrap: wrap; /* 自动换行，杜绝乱码 */
-    justify-content: center;
-    gap: 12px; /* 按钮间距更舒适 */
-  ">
-    <!-- 教育经历按钮 -->
-    <a href="#教育经历" style="
-      flex: 0 0 auto;
-      min-width: 110px;
-      padding: 14px 20px;
-      background: #22c55e; /* 主绿色 */
-      color: white !important; /* 白色文字，对比醒目 */
-      border-radius: 8px; /* 圆角按钮更柔和 */
-      text-align: center;
-      text-decoration: none;
-      font-size: 1em;
-      font-weight: 500; /* 文字加粗，更清晰 */
-      box-shadow: 0 2px 4px rgba(34, 197, 94, 0.2); /* 绿色阴影，增强按钮感 */
-      transition: all 0.2s ease; /* 悬浮动画，更丝滑 */
-    ">教育经历</a>
-
-    <!-- 兴趣方向按钮 -->
-    <a href="#兴趣方向" style="
-      flex: 0 0 auto;
-      min-width: 110px;
-      padding: 14px 20px;
-      background: #22c55e;
-      color: white !important;
-      border-radius: 8px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1em;
-      font-weight: 500;
-      box-shadow: 0 2px 4px rgba(34, 197, 94, 0.2);
-      transition: all 0.2s ease;
-    ">兴趣方向</a>
-
-    <!-- 获奖经历按钮 -->
-    <a href="#获奖经历" style="
-      flex: 0 0 auto;
-      min-width: 110px;
-      padding: 14px 20px;
-      background: #22c55e;
-      color: white !important;
-      border-radius: 8px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1em;
-      font-weight: 500;
-      box-shadow: 0 2px 4px rgba(34, 197, 94, 0.2);
-      transition: all 0.2s ease;
-    ">获奖经历</a>
-
-    <!-- 科研训练按钮 -->
-    <a href="#科研训练" style="
-      flex: 0 0 auto;
-      min-width: 110px;
-      padding: 14px 20px;
-      background: #22c55e;
-      color: white !important;
-      border-radius: 8px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1em;
-      font-weight: 500;
-      box-shadow: 0 2px 4px rgba(34, 197, 94, 0.2);
-      transition: all 0.2s ease;
-    ">科研训练</a>
-
-    <!-- 教学实践按钮 -->
-    <a href="#教学实践" style="
-      flex: 0 0 auto;
-      min-width: 110px;
-      padding: 14px 20px;
-      background: #22c55e;
-      color: white !important;
-      border-radius: 8px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1em;
-      font-weight: 500;
-      box-shadow: 0 2px 4px rgba(34, 197, 94, 0.2);
-      transition: all 0.2s ease;
-    ">教学实践</a>
-  </div>
+<!-- 列表式目录 -->
+<div align="left" style="max-width: 800px; margin: 0 auto 20px auto; padding: 10px; background: #f8f8f8; border-radius: 8px;">
+  <ul style="margin: 5px 0; padding-left: 20px;">
+    <li><a href="#教育经历" style="color: #4299e1; text-decoration: none;">教育经历</a></li>
+    <li><a href="#兴趣方向" style="color: #4299e1; text-decoration: none;">兴趣方向</a></li>
+    <li><a href="#获奖经历" style="color: #4299e1; text-decoration: none;">获奖经历</a></li>
+    <li><a href="#科研训练" style="color: #4299e1; text-decoration: none;">科研训练</a></li>
+    <li><a href="#获奖经历" style="color: #4299e1; text-decoration: none;">获奖经历</a></li>
+    <li><a href="#教学实践" style="color: #4299e1; text-decoration: none;">教学实践</a></li>
+  </ul>
 </div>
 
 ---
 
-## 教育经历 {#教育经历}
+## 教育经历
 华南理工大学 | 数学与应用数学 | 本科
 
-## 兴趣方向 {#兴趣方向}
+## 兴趣方向
 代数、分析及其在量子信息中的应用。目前在郑驻军老师指导下学习量子信息基础理论，未来希望从事量子信息与量子计算相关研究。
 
 <div align="center">
   <img src="https://LMKLJH.github.io/量子信息分支.jpg" 
        alt="量子信息分支图" 
-       style="width: 600px;    /* 固定宽度400px */
+       style="width: 600px;    /* 固定宽度600px */
               height: auto;    /* 高度自动按比例缩放 */
               border: none; 
               margin-bottom: 20px;">
@@ -126,7 +41,7 @@ permalink: /
 
 ---
 
-## 获奖经历 {#获奖经历}
+## 获奖经历
 <table>
   <tr><th>时间</th><th>内容</th></tr>
   <tr><td>2025.06</td><td>第十六届丘成桐大学生数学竞赛 笔试优胜奖 <a href="https://www2.scut.edu.cn/math/2025/0625/c10149a595030/page.htm">学院新闻</a></td></tr>
@@ -137,7 +52,7 @@ permalink: /
 
 ---
 
-## 科研训练 {#科研训练}
+## 科研训练
 
 ### 本科生研究项目（SRP）
 **指导老师：孙浩**
@@ -149,7 +64,7 @@ permalink: /
   2. 对 Aₙ/Bₙ/Cₙ/Dₙ 四类典型单李代数，给出定理的独立完整显式证明；
   3. 明确各类不变多项式生成元；
 
-### 短期暑校经历 
+### 短期暑校经历
 <table>
   <tr><th>时间</th><th>内容</th></tr>
   <tr><td>2025.07.12–07.25</td><td>中科院信工所「密码与数学」暑校 组长、优秀学员 <a href="挑战题汇报_第二组.pdf"> 挑战题汇报_第二组</a></td></tr>
@@ -158,7 +73,7 @@ permalink: /
 
 ---
 
-## 教学实践 {#教学实践}
+## 教学实践
 
 <table>
   <tr>
@@ -185,7 +100,7 @@ permalink: /
 
 ---
 
-## 个人优势 
+## 个人优势
 - 较早参与学术讨论班与相关方向学习，具备向量子信息交叉的数学基础，熟悉近世代数、实变函数、泛函分析，掌握李群和表示论基础。
 - 有一年李群李代数方向系统学习经历，能独立完成规范的英文学术报告；
 - 擅长将抽象内容体系化、通俗化讲解。

@@ -21,7 +21,7 @@ permalink: /
 <div align="center">
   <img src="https://LMKLJH.github.io/量子信息分支.jpg" 
        alt="量子信息分支图" 
-       style="width: 400px;    /* 固定宽度400px */
+       style="width: 600px;    /* 固定宽度400px */
               height: auto;    /* 高度自动按比例缩放 */
               border: none; 
               margin-bottom: 20px;">

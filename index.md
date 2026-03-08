@@ -3,67 +3,21 @@ layout: page
 permalink: /
 ---
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <title>梁家浩 | 个人主页</title>
-    <!-- 强制加载 MathJax，和任何主题/配置无关 -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['\\(', '\\)']],
-                displayMath: [['\\[', '\\]']],
-                processEscapes: true
-            }
-        };
-    </script>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-        .header { text-align: center; margin: 20px 0; }
-        .header img { border-radius: 50%; border: 4px solid #eee; width: 100px; height: 100px; }
-        h1 { color: #333; margin: 10px 0; }
-        p { color: #666; }
-        h2 { margin-top: 30px; color: #444; }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <img src="https://LMKLJH.github.io/myphoto.jpg" alt="头像">
-        <h1>梁家浩(Jiahao Liang)</h1>
-        <p>邮箱：lmnjkljh[at]sina.com | GitHub：<a href="https://github.com/lmkljh">lmkljh</a></p>
-    </div>
+<div align="center">
+  <img src="https://LMKLJH.github.io/myphoto.jpg" 
+       style="width: 100px; height: 100px; border-radius: 50%; border: 4px solid #e0e0e0; margin-bottom: 10px;">
+  <h2 style="margin: 0; color: #333; font-size: 1.8em;">梁家浩(Jiahao Liang)</h2>
+  <p style="color: #666; margin: 5px 0; font-size: 0.9em;">邮箱：lmnjkljh[at]sina.com | GitHub：<a href="https://github.com/lmkljh">lmkljh</a></p>
+</div>
 
-    <h2>教育经历</h2>
-    <p>华南理工大学 | 数学与应用数学 | 本科</p>
+---
 
-    <h2>兴趣方向</h2>
-    <p>代数、分析及其在量子信息中的应用。<br>
-    目前在郑驻军老师指导下学习量子信息基础理论，未来希望从事量子信息与量子计算相关研究。</p>
+## 教育经历
+华南理工大学 | 数学与应用数学 | 本科
 
-    <h2>量子信息理论框架</h2>
-    \[
-    \textbf{量子信息理论}
-    \begin{cases}
-    \text{应用层面（核心协议与算法）}
-    \begin{cases}
-    \text{量子通信：量子密钥分发、量子隐形传态、密集编码} \\
-    \text{量子计算：量子算法、量子模拟、量子机器学习} \\
-    \text{量子密码学：量子密码协议、后量子密码} \\
-    \text{量子计量与传感：高精度测量、量子传感}
-    \end{cases} \\[6pt]
-    \text{基础理论层面（数学与物理基础）}
-    \begin{cases}
-    \text{量子信息论：量子熵、信道容量、量子资源理论} \\
-    \text{量子纠缠理论：纠缠度量、纠缠蒸馏、纠缠判据} \\
-    \text{量子纠错与容错：量子纠错码、容错量子计算} \\
-    \text{量子力学基础：贝尔非定域性、量子基础}
-    \end{cases}
-    \end{cases}
-    \]
-</body>
-</html>
+## 兴趣方向
+代数、分析及其在量子信息中的应用。
+目前在郑驻军老师指导下学习量子信息基础理论，未来希望从事量子信息与量子计算相关研究。
 
 ---
 

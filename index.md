@@ -19,7 +19,7 @@ permalink: /
 代数、分析及其在量子信息中的应用。目前在郑驻军老师指导下学习量子信息基础理论，未来希望从事量子信息与量子计算相关研究。
 
 <div align="center">
-  <img src="https://LMKLJH.github.io/QItree.jpg" 
+  <img src="https://LMKLJH.github.io/量子信息分支.jpg" 
        style="max-width: 100%; height: auto; border: none; margin-bottom: 20px;">
 </div>
 

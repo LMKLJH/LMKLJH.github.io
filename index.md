@@ -95,7 +95,7 @@ graph TD
   <tr>
     <td>2023.12–至今</td>
     <td>数学讨论班主讲：代数学、微分流形、李群与李代数</td>
-    <td><a href="https://github.com/LMKLJH/LMKLJH.github.io/blob/main/Rotman%20Algebra%20Part1.pdf">代数学教材</a></td>
+    <td><a href="https://github.com/LMKLJH/LMKLJH.github.io/raw/main/Rotman%20Algebra%20Part1.pdf">代数学教材</a></td>
   </tr>
   <tr>
     <td>2024.12–至今</td>

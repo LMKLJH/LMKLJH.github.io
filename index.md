@@ -21,7 +21,7 @@ permalink: /
 ## 兴趣方向
 代数、分析及其在量子信息中的应用。
 目前在郑驻军老师指导下学习量子信息基础理论，未来希望从事量子信息与量子计算相关研究。
-<img width="5146" height="1498" alt="e62a16feda6365a285b29da6c706e7e2" src="https://github.com/user-attachments/assets/7b6f147c-b3bd-4c97-b6bc-157a98180f42" />
+<img width="514" height="149" alt="e62a16feda6365a285b29da6c706e7e2" src="https://github.com/user-attachments/assets/7b6f147c-b3bd-4c97-b6bc-157a98180f42" />
 
 ---
 

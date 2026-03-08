@@ -3,19 +3,18 @@ title: 梁家浩 | 个人主页
 url: "https://LMKLJH.github.io"
 baseurl: ""
 
-# 关键：换掉 Minima 主题，用 Primer 主题（GitHub 同款）
-remote_theme: pages-themes/primer@v0.6.0
-# 关闭 Primer 主题的多余导航/标题
+# 核心：换成数学友好主题（自带 MathJax）
+remote_theme: vsoch/jekyll-math@v1.0.0
 plugins:
-  - jekyll-remote-theme  # 必须加这个插件，才能加载远程主题
+  - jekyll-remote-theme
   - jekyll-feed
 
-# 表格渲染配置（Primer 主题原生支持 Markdown 表格）
+# 公式渲染配置（自动生效，无需额外 JS）
 markdown: kramdown
 kramdown:
+  math_engine: mathjax
   parse_block_html: true
 
-# 排除多余文件
 exclude:
   - Gemfile
   - Gemfile.lock

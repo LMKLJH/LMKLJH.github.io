@@ -138,4 +138,4 @@ TBA (待定，预计是用表示论解决量子信息中的某个小问题)
    
    具体的故事请看 <a href="https://www.zhihu.com/question/445363153/answer/3008923754">在学生时期独立地探索出自己的数学发现，是什么体验？</a>
 
-  再聊点“题外话”，但是对自己的人生很重要的经历和反思。 <a href="https://github.com/LMKLJH/LMKLJH.github.io/blob/main/关于选择与人生的思考.md">othertalk</a>  
+  再聊点“题外话”，但是对自己的人生很重要的经历和反思。 <a href="关于选择与人生的思考.md">othertalk</a>  

@@ -3,12 +3,13 @@ layout: page
 permalink: /
 ---
 
-<!-- 语言切换按钮 -->
-<button id="langToggle" style="position: fixed; top: 20px; right: 20px; padding: 8px 16px; background: #4299e1; color: white; border: none; border-radius: 4px; cursor: pointer; z-index: 9999; font-size: 0.9em;">
-  English / 中文
-</button>
+<!-- 语言切换链接（最原始的a标签，文字高亮） -->
+<div align="center" style="margin-bottom: 20px; font-size: 1.1em;">
+  <a href="javascript:switchToCN()" style="color: #4299e1; text-decoration: none; margin: 0 15px; font-weight: 500;">中文</a>
+  <a href="javascript:switchToEN()" style="color: #4299e1; text-decoration: none; margin: 0 15px; font-weight: 500;">English</a>
+</div>
 
-<!-- 中文版内容 -->
+<!-- 中文版内容（默认显示） -->
 <div id="cnContent">
   <div align="center">
     <img src="https://LMKLJH.github.io/myphoto.jpg" 
@@ -142,7 +143,7 @@ permalink: /
     再聊点“题外话”，但是对自己的人生很重要的经历和反思。 <a href="关于选择与人生的思考.md">othertalk</a>
 </div>
 
-<!-- 英文版内容 (初始隐藏) -->
+<!-- 英文版内容（默认隐藏） -->
 <div id="enContent" style="display: none;">
   <div align="center">
     <img src="https://LMKLJH.github.io/myphoto.jpg" 
@@ -311,30 +312,17 @@ permalink: /
   <a href="关于选择与人生的思考.md">othertalk</a>
 </div>
 
-<!-- 语言切换逻辑 -->
-<script>
-  // 获取元素
-  const langToggle = document.getElementById('langToggle');
-  const cnContent = document.getElementById('cnContent');
-  const enContent = document.getElementById('enContent');
-  
-  // 初始状态：显示中文
-  let isChinese = true;
-  
-  // 点击切换逻辑
-  langToggle.addEventListener('click', function() {
-    if (isChinese) {
-      // 切换到英文
-      cnContent.style.display = 'none';
-      enContent.style.display = 'block';
-      langToggle.textContent = '中文 / English';
-      isChinese = false;
-    } else {
-      // 切换到中文
-      enContent.style.display = 'none';
-      cnContent.style.display = 'block';
-      langToggle.textContent = 'English / 中文';
-      isChinese = true;
-    }
-  });
+<!-- 最原始的切换逻辑（无任何复杂语法） -->
+<script type="text/javascript">
+// 切换到中文
+function switchToCN() {
+  document.getElementById("cnContent").style.display = "block";
+  document.getElementById("enContent").style.display = "none";
+}
+
+// 切换到英文
+function switchToEN() {
+  document.getElementById("cnContent").style.display = "none";
+  document.getElementById("enContent").style.display = "block";
+}
 </script>
